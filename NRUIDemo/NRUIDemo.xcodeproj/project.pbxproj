@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		836E89E724B2CF5C00846457 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E89E624B2CF5C00846457 /* AppDelegate.m */; };
+		836E89EA24B2CF5C00846457 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E89E924B2CF5C00846457 /* SceneDelegate.m */; };
+		836E89ED24B2CF5C00846457 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E89EC24B2CF5C00846457 /* ViewController.m */; };
+		836E89F024B2CF5C00846457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836E89EE24B2CF5C00846457 /* Main.storyboard */; };
+		836E89F324B2CF5C00846457 /* NRUIDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836E89F124B2CF5C00846457 /* NRUIDemo.xcdatamodeld */; };
+		836E89F524B2CF5E00846457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836E89F424B2CF5E00846457 /* Assets.xcassets */; };
+		836E89F824B2CF5E00846457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836E89F624B2CF5E00846457 /* LaunchScreen.storyboard */; };
+		836E89FB24B2CF5E00846457 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E89FA24B2CF5E00846457 /* main.m */; };
+		836E8A0524B2CF5E00846457 /* NRUIDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E8A0424B2CF5E00846457 /* NRUIDemoTests.m */; };
+		836E8A1024B2CF5E00846457 /* NRUIDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E8A0F24B2CF5E00846457 /* NRUIDemoUITests.m */; };
+		836E8A1F24B2EF6B00846457 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E8A1E24B2EF6B00846457 /* Default-568h@2x.png */; };
+		836E8A2724B2FFE000846457 /* NRMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E8A2624B2FFE000846457 /* NRMainTableViewController.m */; };
+		836E8A2A24B3006B00846457 /* NRDemoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E8A2924B3006B00846457 /* NRDemoItem.m */; };
+		836E8A2D24B3029C00846457 /* NRDocumentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836E8A2C24B3029C00846457 /* NRDocumentPickerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		836E8A0124B2CF5E00846457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 836E89DA24B2CF5C00846457 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 836E89E124B2CF5C00846457;
+			remoteInfo = NRUIDemo;
+		};
+		836E8A0C24B2CF5E00846457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 836E89DA24B2CF5C00846457 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 836E89E124B2CF5C00846457;
+			remoteInfo = NRUIDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		836E89E224B2CF5C00846457 /* NRUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		836E89E524B2CF5C00846457 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		836E89E624B2CF5C00846457 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		836E89E824B2CF5C00846457 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		836E89E924B2CF5C00846457 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		836E89EB24B2CF5C00846457 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		836E89EC24B2CF5C00846457 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		836E89EF24B2CF5C00846457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		836E89F224B2CF5C00846457 /* NRUIDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NRUIDemo.xcdatamodel; sourceTree = "<group>"; };
+		836E89F424B2CF5E00846457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		836E89F724B2CF5E00846457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		836E89F924B2CF5E00846457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836E89FA24B2CF5E00846457 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		836E8A0024B2CF5E00846457 /* NRUIDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NRUIDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		836E8A0424B2CF5E00846457 /* NRUIDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUIDemoTests.m; sourceTree = "<group>"; };
+		836E8A0624B2CF5E00846457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836E8A0B24B2CF5E00846457 /* NRUIDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NRUIDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		836E8A0F24B2CF5E00846457 /* NRUIDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUIDemoUITests.m; sourceTree = "<group>"; };
+		836E8A1124B2CF5E00846457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836E8A1E24B2EF6B00846457 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		836E8A2524B2FFE000846457 /* NRMainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRMainTableViewController.h; sourceTree = "<group>"; };
+		836E8A2624B2FFE000846457 /* NRMainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMainTableViewController.m; sourceTree = "<group>"; };
+		836E8A2824B3006B00846457 /* NRDemoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDemoItem.h; sourceTree = "<group>"; };
+		836E8A2924B3006B00846457 /* NRDemoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDemoItem.m; sourceTree = "<group>"; };
+		836E8A2B24B3029C00846457 /* NRDocumentPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDocumentPickerViewController.h; sourceTree = "<group>"; };
+		836E8A2C24B3029C00846457 /* NRDocumentPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDocumentPickerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		836E89DF24B2CF5C00846457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		836E89FD24B2CF5E00846457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		836E8A0824B2CF5E00846457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		836E89D924B2CF5C00846457 = {
+			isa = PBXGroup;
+			children = (
+				836E8A1E24B2EF6B00846457 /* Default-568h@2x.png */,
+				836E89E424B2CF5C00846457 /* NRUIDemo */,
+				836E8A0324B2CF5E00846457 /* NRUIDemoTests */,
+				836E8A0E24B2CF5E00846457 /* NRUIDemoUITests */,
+				836E89E324B2CF5C00846457 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		836E89E324B2CF5C00846457 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				836E89E224B2CF5C00846457 /* NRUIDemo.app */,
+				836E8A0024B2CF5E00846457 /* NRUIDemoTests.xctest */,
+				836E8A0B24B2CF5E00846457 /* NRUIDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		836E89E424B2CF5C00846457 /* NRUIDemo */ = {
+			isa = PBXGroup;
+			children = (
+				836E8A2024B2EF9700846457 /* Main */,
+				836E8A1D24B2EF0200846457 /* ApplicationBase */,
+				836E89EB24B2CF5C00846457 /* ViewController.h */,
+				836E89EC24B2CF5C00846457 /* ViewController.m */,
+				836E89EE24B2CF5C00846457 /* Main.storyboard */,
+				836E89F624B2CF5E00846457 /* LaunchScreen.storyboard */,
+				836E89F424B2CF5E00846457 /* Assets.xcassets */,
+				836E89F124B2CF5C00846457 /* NRUIDemo.xcdatamodeld */,
+				836E89F924B2CF5E00846457 /* Info.plist */,
+			);
+			path = NRUIDemo;
+			sourceTree = "<group>";
+		};
+		836E8A0324B2CF5E00846457 /* NRUIDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				836E8A0424B2CF5E00846457 /* NRUIDemoTests.m */,
+				836E8A0624B2CF5E00846457 /* Info.plist */,
+			);
+			path = NRUIDemoTests;
+			sourceTree = "<group>";
+		};
+		836E8A0E24B2CF5E00846457 /* NRUIDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				836E8A0F24B2CF5E00846457 /* NRUIDemoUITests.m */,
+				836E8A1124B2CF5E00846457 /* Info.plist */,
+			);
+			path = NRUIDemoUITests;
+			sourceTree = "<group>";
+		};
+		836E8A1D24B2EF0200846457 /* ApplicationBase */ = {
+			isa = PBXGroup;
+			children = (
+				836E89FA24B2CF5E00846457 /* main.m */,
+				836E89E524B2CF5C00846457 /* AppDelegate.h */,
+				836E89E624B2CF5C00846457 /* AppDelegate.m */,
+				836E89E824B2CF5C00846457 /* SceneDelegate.h */,
+				836E89E924B2CF5C00846457 /* SceneDelegate.m */,
+			);
+			path = ApplicationBase;
+			sourceTree = "<group>";
+		};
+		836E8A2024B2EF9700846457 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				836E8A2324B2FFAA00846457 /* ViewControllers */,
+				836E8A2524B2FFE000846457 /* NRMainTableViewController.h */,
+				836E8A2624B2FFE000846457 /* NRMainTableViewController.m */,
+				836E8A2824B3006B00846457 /* NRDemoItem.h */,
+				836E8A2924B3006B00846457 /* NRDemoItem.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		836E8A2324B2FFAA00846457 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				836E8A2424B2FFBA00846457 /* Documents */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		836E8A2424B2FFBA00846457 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				836E8A2B24B3029C00846457 /* NRDocumentPickerViewController.h */,
+				836E8A2C24B3029C00846457 /* NRDocumentPickerViewController.m */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		836E89E124B2CF5C00846457 /* NRUIDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 836E8A1424B2CF5E00846457 /* Build configuration list for PBXNativeTarget "NRUIDemo" */;
+			buildPhases = (
+				836E89DE24B2CF5C00846457 /* Sources */,
+				836E89DF24B2CF5C00846457 /* Frameworks */,
+				836E89E024B2CF5C00846457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NRUIDemo;
+			productName = NRUIDemo;
+			productReference = 836E89E224B2CF5C00846457 /* NRUIDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		836E89FF24B2CF5E00846457 /* NRUIDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 836E8A1724B2CF5E00846457 /* Build configuration list for PBXNativeTarget "NRUIDemoTests" */;
+			buildPhases = (
+				836E89FC24B2CF5E00846457 /* Sources */,
+				836E89FD24B2CF5E00846457 /* Frameworks */,
+				836E89FE24B2CF5E00846457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				836E8A0224B2CF5E00846457 /* PBXTargetDependency */,
+			);
+			name = NRUIDemoTests;
+			productName = NRUIDemoTests;
+			productReference = 836E8A0024B2CF5E00846457 /* NRUIDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		836E8A0A24B2CF5E00846457 /* NRUIDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 836E8A1A24B2CF5E00846457 /* Build configuration list for PBXNativeTarget "NRUIDemoUITests" */;
+			buildPhases = (
+				836E8A0724B2CF5E00846457 /* Sources */,
+				836E8A0824B2CF5E00846457 /* Frameworks */,
+				836E8A0924B2CF5E00846457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				836E8A0D24B2CF5E00846457 /* PBXTargetDependency */,
+			);
+			name = NRUIDemoUITests;
+			productName = NRUIDemoUITests;
+			productReference = 836E8A0B24B2CF5E00846457 /* NRUIDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		836E89DA24B2CF5C00846457 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Nicorobine;
+				TargetAttributes = {
+					836E89E124B2CF5C00846457 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					836E89FF24B2CF5E00846457 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 836E89E124B2CF5C00846457;
+					};
+					836E8A0A24B2CF5E00846457 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 836E89E124B2CF5C00846457;
+					};
+				};
+			};
+			buildConfigurationList = 836E89DD24B2CF5C00846457 /* Build configuration list for PBXProject "NRUIDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 836E89D924B2CF5C00846457;
+			productRefGroup = 836E89E324B2CF5C00846457 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				836E89E124B2CF5C00846457 /* NRUIDemo */,
+				836E89FF24B2CF5E00846457 /* NRUIDemoTests */,
+				836E8A0A24B2CF5E00846457 /* NRUIDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		836E89E024B2CF5C00846457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836E89F824B2CF5E00846457 /* LaunchScreen.storyboard in Resources */,
+				836E8A1F24B2EF6B00846457 /* Default-568h@2x.png in Resources */,
+				836E89F524B2CF5E00846457 /* Assets.xcassets in Resources */,
+				836E89F024B2CF5C00846457 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		836E89FE24B2CF5E00846457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		836E8A0924B2CF5E00846457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		836E89DE24B2CF5C00846457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836E89FB24B2CF5E00846457 /* main.m in Sources */,
+				836E89F324B2CF5C00846457 /* NRUIDemo.xcdatamodeld in Sources */,
+				836E8A2724B2FFE000846457 /* NRMainTableViewController.m in Sources */,
+				836E8A2A24B3006B00846457 /* NRDemoItem.m in Sources */,
+				836E89ED24B2CF5C00846457 /* ViewController.m in Sources */,
+				836E89E724B2CF5C00846457 /* AppDelegate.m in Sources */,
+				836E8A2D24B3029C00846457 /* NRDocumentPickerViewController.m in Sources */,
+				836E89EA24B2CF5C00846457 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		836E89FC24B2CF5E00846457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836E8A0524B2CF5E00846457 /* NRUIDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		836E8A0724B2CF5E00846457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836E8A1024B2CF5E00846457 /* NRUIDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		836E8A0224B2CF5E00846457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 836E89E124B2CF5C00846457 /* NRUIDemo */;
+			targetProxy = 836E8A0124B2CF5E00846457 /* PBXContainerItemProxy */;
+		};
+		836E8A0D24B2CF5E00846457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 836E89E124B2CF5C00846457 /* NRUIDemo */;
+			targetProxy = 836E8A0C24B2CF5E00846457 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		836E89EE24B2CF5C00846457 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				836E89EF24B2CF5C00846457 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		836E89F624B2CF5E00846457 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				836E89F724B2CF5E00846457 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		836E8A1224B2CF5E00846457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		836E8A1324B2CF5E00846457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		836E8A1524B2CF5E00846457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = NRUIDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nicorobine.NRUIDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		836E8A1624B2CF5E00846457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = NRUIDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nicorobine.NRUIDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		836E8A1824B2CF5E00846457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = NRUIDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nicorobine.NRUIDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NRUIDemo.app/NRUIDemo";
+			};
+			name = Debug;
+		};
+		836E8A1924B2CF5E00846457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = NRUIDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nicorobine.NRUIDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NRUIDemo.app/NRUIDemo";
+			};
+			name = Release;
+		};
+		836E8A1B24B2CF5E00846457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = NRUIDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nicorobine.NRUIDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NRUIDemo;
+			};
+			name = Debug;
+		};
+		836E8A1C24B2CF5E00846457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = NRUIDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nicorobine.NRUIDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NRUIDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		836E89DD24B2CF5C00846457 /* Build configuration list for PBXProject "NRUIDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836E8A1224B2CF5E00846457 /* Debug */,
+				836E8A1324B2CF5E00846457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		836E8A1424B2CF5E00846457 /* Build configuration list for PBXNativeTarget "NRUIDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836E8A1524B2CF5E00846457 /* Debug */,
+				836E8A1624B2CF5E00846457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		836E8A1724B2CF5E00846457 /* Build configuration list for PBXNativeTarget "NRUIDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836E8A1824B2CF5E00846457 /* Debug */,
+				836E8A1924B2CF5E00846457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		836E8A1A24B2CF5E00846457 /* Build configuration list for PBXNativeTarget "NRUIDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836E8A1B24B2CF5E00846457 /* Debug */,
+				836E8A1C24B2CF5E00846457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		836E89F124B2CF5C00846457 /* NRUIDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				836E89F224B2CF5C00846457 /* NRUIDemo.xcdatamodel */,
+			);
+			currentVersion = 836E89F224B2CF5C00846457 /* NRUIDemo.xcdatamodel */;
+			path = NRUIDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 836E89DA24B2CF5C00846457 /* Project object */;
+}
