@@ -28,10 +28,14 @@ typedef NS_ENUM(NSUInteger, LoginState) {
 
 @implementation NRBiometricLoginViewController
 
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self _varifyDevice];
 }
+
+#pragma mark - Private
 
 - (BOOL)_varifyDevice {
     _laContact = [[LAContext alloc] init];
@@ -40,14 +44,46 @@ typedef NS_ENUM(NSUInteger, LoginState) {
     return result;
 }
 
+- (void)test {
+    SecAccessControlRef secRef = NULL;
+    
+    [_laContact evaluateAccessControl:secRef operation:LAAccessControlOperationUseKeySign localizedReason:@"localizeReason" reply:^(BOOL success, NSError * _Nullable error) {
+        
+    }];
+}
+
+#pragma mark - Actions
+
 - (IBAction)onTap:(UIButton *)sender {
     [_laContact invalidate];
     if (_loginState == LoginState_Default) {
         _laContact = [[LAContext alloc] init];
         [_laContact evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"登录" reply:^(BOOL success, NSError * _Nullable error) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.loginState = success ? LoginState_Logedin : LoginState_Default;
-            });
+            if (success) {
+                NSLog(@"success");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.loginState = success ? LoginState_Logedin : LoginState_Default;
+                });
+            } else {
+                // 6.根据用户授权状态进行下一步操作
+                switch (error.code) {
+                    case LAErrorUserCancel:
+                        NSLog(@"用户取消了授权 - %@", error.localizedDescription);
+                        break;
+                    case LAErrorUserFallback:
+                        NSLog(@"用户点击了“输入密码”按钮 - %@", error.localizedDescription);
+                        break;
+                    case LAErrorAuthenticationFailed:
+                        NSLog(@"您已授权失败3次 - %@", error.localizedDescription);
+                        break;
+                    case LAErrorSystemCancel:
+                        NSLog(@"应用程序进入后台 - %@", error.localizedDescription);
+                        break;
+                    default:
+                        NSLog(@"++%@--%zd", error.localizedDescription, error.code);
+                        break;
+                }
+            }
         }];
     } else {
         self.loginState = LoginState_Default;
