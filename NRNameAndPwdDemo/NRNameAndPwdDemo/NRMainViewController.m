@@ -7,8 +7,10 @@
 //
 
 #import "NRMainViewController.h"
-#import "NRBiometricLoginViewController.h"
 #import "NRMainModel.h"
+
+#import "NRLoginViewController.h"
+#import "NRBiometricLoginViewController.h"
 
 @interface NRMainViewController ()
 
@@ -35,6 +37,7 @@
                 [weakSelf _toBiometricAuth:info];
                 break;
             default:
+                [weakSelf _toLogin:info];
                 break;
         }
     };
@@ -44,8 +47,17 @@
 
 - (void)_toBiometricAuth:(NRCellInfo *)info {
     NRBiometricLoginViewController* biometricVC = [[NRBiometricLoginViewController alloc] init];
-    biometricVC.title = info.title;
-    [self.navigationController showViewController:biometricVC sender:self];
+    [self _showDefualt:biometricVC info:info];
+}
+
+- (void)_toLogin:(NRCellInfo *)info {
+    NRLoginViewController* loginVC = [[NRLoginViewController alloc] init];
+    [self _showDefualt:loginVC info:info];
+}
+
+- (void)_showDefualt:(UIViewController *)vc info:(NRCellInfo *)info {
+    vc.title = info.title;
+    [self.navigationController showViewController:vc sender:self];
 }
 
 #pragma mark - Table view data source

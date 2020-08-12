@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		525B663C24E35ECF00CC7CC4 /* NRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B663A24E35ECF00CC7CC4 /* NRLoginViewController.m */; };
+		525B663D24E35ECF00CC7CC4 /* NRLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B663B24E35ECF00CC7CC4 /* NRLoginViewController.xib */; };
+		525B664224E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B664024E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m */; };
+		525B664324E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B664124E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.xib */; };
+		525B664724E3F40B00CC7CC4 /* NRCodeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B664624E3F40B00CC7CC4 /* NRCodeItem.m */; };
+		525B668C24E42BAD00CC7CC4 /* NRLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B668B24E42BAD00CC7CC4 /* NRLoginModel.m */; };
 		83C966D824D404D000913065 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966D724D404D000913065 /* AppDelegate.m */; };
 		83C966DB24D404D000913065 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966DA24D404D000913065 /* SceneDelegate.m */; };
 		83C966E124D404D000913065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C966DF24D404D000913065 /* Main.storyboard */; };
@@ -23,6 +29,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		525B663924E35ECF00CC7CC4 /* NRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRLoginViewController.h; sourceTree = "<group>"; };
+		525B663A24E35ECF00CC7CC4 /* NRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRLoginViewController.m; sourceTree = "<group>"; };
+		525B663B24E35ECF00CC7CC4 /* NRLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRLoginViewController.xib; sourceTree = "<group>"; };
+		525B663F24E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRSMSOneTimeCodeViewController.h; sourceTree = "<group>"; };
+		525B664024E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRSMSOneTimeCodeViewController.m; sourceTree = "<group>"; };
+		525B664124E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRSMSOneTimeCodeViewController.xib; sourceTree = "<group>"; };
+		525B664524E3F40B00CC7CC4 /* NRCodeItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRCodeItem.h; sourceTree = "<group>"; };
+		525B664624E3F40B00CC7CC4 /* NRCodeItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRCodeItem.m; sourceTree = "<group>"; };
+		525B668A24E42BAD00CC7CC4 /* NRLoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRLoginModel.h; sourceTree = "<group>"; };
+		525B668B24E42BAD00CC7CC4 /* NRLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRLoginModel.m; sourceTree = "<group>"; };
 		83C966D324D404D000913065 /* NRNameAndPwdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRNameAndPwdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C966D624D404D000913065 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83C966D724D404D000913065 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +75,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		525B663824E35EAA00CC7CC4 /* AutoFill */ = {
+			isa = PBXGroup;
+			children = (
+				525B668924E42B8500CC7CC4 /* Model */,
+				525B663924E35ECF00CC7CC4 /* NRLoginViewController.h */,
+				525B663A24E35ECF00CC7CC4 /* NRLoginViewController.m */,
+				525B663B24E35ECF00CC7CC4 /* NRLoginViewController.xib */,
+			);
+			path = AutoFill;
+			sourceTree = "<group>";
+		};
+		525B663E24E393FF00CC7CC4 /* SMSCode */ = {
+			isa = PBXGroup;
+			children = (
+				525B664424E39B0B00CC7CC4 /* Views */,
+				525B663F24E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.h */,
+				525B664024E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m */,
+				525B664124E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.xib */,
+			);
+			path = SMSCode;
+			sourceTree = "<group>";
+		};
+		525B664424E39B0B00CC7CC4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				525B664524E3F40B00CC7CC4 /* NRCodeItem.h */,
+				525B664624E3F40B00CC7CC4 /* NRCodeItem.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		525B668924E42B8500CC7CC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				525B668A24E42BAD00CC7CC4 /* NRLoginModel.h */,
+				525B668B24E42BAD00CC7CC4 /* NRLoginModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		83C966CA24D404D000913065 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +167,8 @@
 		83C966F724D4095F00913065 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				525B663E24E393FF00CC7CC4 /* SMSCode */,
+				525B663824E35EAA00CC7CC4 /* AutoFill */,
 				83C966F824D4097200913065 /* FaceIdOrTouchID */,
 			);
 			path = Categories;
@@ -183,10 +241,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525B663D24E35ECF00CC7CC4 /* NRLoginViewController.xib in Resources */,
 				83C966E924D404D500913065 /* LaunchScreen.storyboard in Resources */,
 				83C966FD24D409C300913065 /* NRBiometricLoginViewController.xib in Resources */,
 				83C966E624D404D500913065 /* Assets.xcassets in Resources */,
 				83C966E124D404D000913065 /* Main.storyboard in Resources */,
+				525B664324E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,11 +259,15 @@
 			files = (
 				83C966EC24D404D500913065 /* main.m in Sources */,
 				83C966FC24D409C300913065 /* NRBiometricLoginViewController.m in Sources */,
+				525B663C24E35ECF00CC7CC4 /* NRLoginViewController.m in Sources */,
 				83C966E424D404D000913065 /* NRNameAndPwdDemo.xcdatamodeld in Sources */,
+				525B664224E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m in Sources */,
 				83C9670024D4172A00913065 /* NRMainViewController.m in Sources */,
 				83C966D824D404D000913065 /* AppDelegate.m in Sources */,
+				525B668C24E42BAD00CC7CC4 /* NRLoginModel.m in Sources */,
 				83C966DB24D404D000913065 /* SceneDelegate.m in Sources */,
 				83C9670324D4182800913065 /* NRMainModel.m in Sources */,
+				525B664724E3F40B00CC7CC4 /* NRCodeItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
