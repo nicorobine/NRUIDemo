@@ -44,6 +44,8 @@ typedef NS_ENUM(NSUInteger, LoginState) {
     return result;
 }
 
+#pragma mark - Credential
+
 - (void)test {
     SecAccessControlRef secRef = NULL;
     
@@ -51,6 +53,11 @@ typedef NS_ENUM(NSUInteger, LoginState) {
         
     }];
 }
+
+- (void)setCredential {
+    [_laContact setCredential:[[NSData alloc] init] type:LACredentialTypeApplicationPassword];
+}
+
 
 #pragma mark - Actions
 
