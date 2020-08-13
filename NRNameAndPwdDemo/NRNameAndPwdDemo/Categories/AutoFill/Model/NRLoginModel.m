@@ -17,10 +17,18 @@
     return self;
 }
 
+- (instancetype)initWithStateChange:(OnStateChange)change {
+    if (self = [super init]) {
+        self.onStateChange = change;
+        [self nr_setup];
+    }
+    return self;
+}
+
 #pragma mark - Private
 
 - (void)nr_setup {
-    _passwordRules = @"required: upper, lower, digit, [-().&@?’#,/&quot;+]; mainlength: 8";
+    self.passwordRules = @"required: upper, lower, digit, [-().&@?’#,/&quot;+]; mainlength: 8";
 }
 
 #pragma mark - Public

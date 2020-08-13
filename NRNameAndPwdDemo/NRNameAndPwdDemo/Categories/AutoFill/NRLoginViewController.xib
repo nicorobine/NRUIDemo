@@ -69,6 +69,16 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkp-rx-YTt">
                     <rect key="frame" x="352" y="318.5" width="19" height="22"/>
                     <state key="normal" image="lock.fill" catalog="system"/>
+                    <connections>
+                        <action selector="updatePasswordRule:" destination="-1" eventType="touchUpInside" id="eiL-hh-VoT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG9-jv-n2H">
+                    <rect key="frame" x="359" y="52" width="31" height="30"/>
+                    <state key="normal" title="注册"/>
+                    <connections>
+                        <action selector="regist:" destination="-1" eventType="touchUpInside" id="YhZ-Dz-ieP"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -85,12 +95,14 @@
                 <constraint firstItem="NrJ-1j-F62" firstAttribute="top" secondItem="I0J-Rb-w3b" secondAttribute="bottom" constant="8" id="Wne-tp-nar"/>
                 <constraint firstItem="Sta-ty-eU1" firstAttribute="top" secondItem="85H-pd-rji" secondAttribute="bottom" constant="8" id="b5F-QE-hkb"/>
                 <constraint firstItem="61t-vL-2b0" firstAttribute="top" secondItem="tpR-t7-gBA" secondAttribute="bottom" constant="24" id="gir-Ol-Ccp"/>
+                <constraint firstItem="IG9-jv-n2H" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="8" id="gjJ-O0-4lB"/>
                 <constraint firstItem="61t-vL-2b0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hGY-XW-57g"/>
                 <constraint firstItem="NrJ-1j-F62" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iCP-7h-Un1"/>
                 <constraint firstItem="tpR-t7-gBA" firstAttribute="width" secondItem="Sta-ty-eU1" secondAttribute="width" id="iyz-Bh-Ff2"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Sta-ty-eU1" secondAttribute="trailing" constant="70" id="rlj-V3-oJY"/>
                 <constraint firstItem="xkp-rx-YTt" firstAttribute="leading" secondItem="tpR-t7-gBA" secondAttribute="trailing" constant="8" id="sw3-kA-Zve"/>
                 <constraint firstItem="fKo-zp-Gi8" firstAttribute="leading" secondItem="85H-pd-rji" secondAttribute="leading" id="wvi-U1-6Oa"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="IG9-jv-n2H" secondAttribute="trailing" constant="24" id="z3C-Bm-nX4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="1" y="96"/>

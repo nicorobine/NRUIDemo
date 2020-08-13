@@ -13,6 +13,10 @@
 		525B664324E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B664124E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.xib */; };
 		525B664724E3F40B00CC7CC4 /* NRCodeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B664624E3F40B00CC7CC4 /* NRCodeItem.m */; };
 		525B668C24E42BAD00CC7CC4 /* NRLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B668B24E42BAD00CC7CC4 /* NRLoginModel.m */; };
+		525B669024E57DA600CC7CC4 /* NRTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B668E24E57DA600CC7CC4 /* NRTextInputViewController.m */; };
+		525B669124E57DA600CC7CC4 /* NRTextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B668F24E57DA600CC7CC4 /* NRTextInputViewController.xib */; };
+		525B669524E5812200CC7CC4 /* NRRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B669324E5812200CC7CC4 /* NRRegistViewController.m */; };
+		525B669624E5812200CC7CC4 /* NRRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B669424E5812200CC7CC4 /* NRRegistViewController.xib */; };
 		83C966D824D404D000913065 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966D724D404D000913065 /* AppDelegate.m */; };
 		83C966DB24D404D000913065 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966DA24D404D000913065 /* SceneDelegate.m */; };
 		83C966E124D404D000913065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C966DF24D404D000913065 /* Main.storyboard */; };
@@ -39,6 +43,12 @@
 		525B664624E3F40B00CC7CC4 /* NRCodeItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRCodeItem.m; sourceTree = "<group>"; };
 		525B668A24E42BAD00CC7CC4 /* NRLoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRLoginModel.h; sourceTree = "<group>"; };
 		525B668B24E42BAD00CC7CC4 /* NRLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRLoginModel.m; sourceTree = "<group>"; };
+		525B668D24E57DA600CC7CC4 /* NRTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRTextInputViewController.h; sourceTree = "<group>"; };
+		525B668E24E57DA600CC7CC4 /* NRTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRTextInputViewController.m; sourceTree = "<group>"; };
+		525B668F24E57DA600CC7CC4 /* NRTextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRTextInputViewController.xib; sourceTree = "<group>"; };
+		525B669224E5812200CC7CC4 /* NRRegistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRRegistViewController.h; sourceTree = "<group>"; };
+		525B669324E5812200CC7CC4 /* NRRegistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRRegistViewController.m; sourceTree = "<group>"; };
+		525B669424E5812200CC7CC4 /* NRRegistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRRegistViewController.xib; sourceTree = "<group>"; };
 		83C966D324D404D000913065 /* NRNameAndPwdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRNameAndPwdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C966D624D404D000913065 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83C966D724D404D000913065 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +92,12 @@
 				525B663924E35ECF00CC7CC4 /* NRLoginViewController.h */,
 				525B663A24E35ECF00CC7CC4 /* NRLoginViewController.m */,
 				525B663B24E35ECF00CC7CC4 /* NRLoginViewController.xib */,
+				525B668D24E57DA600CC7CC4 /* NRTextInputViewController.h */,
+				525B668E24E57DA600CC7CC4 /* NRTextInputViewController.m */,
+				525B668F24E57DA600CC7CC4 /* NRTextInputViewController.xib */,
+				525B669224E5812200CC7CC4 /* NRRegistViewController.h */,
+				525B669324E5812200CC7CC4 /* NRRegistViewController.m */,
+				525B669424E5812200CC7CC4 /* NRRegistViewController.xib */,
 			);
 			path = AutoFill;
 			sourceTree = "<group>";
@@ -241,10 +257,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525B669624E5812200CC7CC4 /* NRRegistViewController.xib in Resources */,
 				525B663D24E35ECF00CC7CC4 /* NRLoginViewController.xib in Resources */,
 				83C966E924D404D500913065 /* LaunchScreen.storyboard in Resources */,
 				83C966FD24D409C300913065 /* NRBiometricLoginViewController.xib in Resources */,
 				83C966E624D404D500913065 /* Assets.xcassets in Resources */,
+				525B669124E57DA600CC7CC4 /* NRTextInputViewController.xib in Resources */,
 				83C966E124D404D000913065 /* Main.storyboard in Resources */,
 				525B664324E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.xib in Resources */,
 			);
@@ -263,9 +281,11 @@
 				83C966E424D404D000913065 /* NRNameAndPwdDemo.xcdatamodeld in Sources */,
 				525B664224E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m in Sources */,
 				83C9670024D4172A00913065 /* NRMainViewController.m in Sources */,
+				525B669024E57DA600CC7CC4 /* NRTextInputViewController.m in Sources */,
 				83C966D824D404D000913065 /* AppDelegate.m in Sources */,
 				525B668C24E42BAD00CC7CC4 /* NRLoginModel.m in Sources */,
 				83C966DB24D404D000913065 /* SceneDelegate.m in Sources */,
+				525B669524E5812200CC7CC4 /* NRRegistViewController.m in Sources */,
 				83C9670324D4182800913065 /* NRMainModel.m in Sources */,
 				525B664724E3F40B00CC7CC4 /* NRCodeItem.m in Sources */,
 			);

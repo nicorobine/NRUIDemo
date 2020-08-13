@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)logIn;
 
+- (instancetype)initWithStateChange:(OnStateChange)change;
+
 @end
 
 NS_ASSUME_NONNULL_END
