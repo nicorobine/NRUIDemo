@@ -17,6 +17,7 @@
 		525B669124E57DA600CC7CC4 /* NRTextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B668F24E57DA600CC7CC4 /* NRTextInputViewController.xib */; };
 		525B669524E5812200CC7CC4 /* NRRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B669324E5812200CC7CC4 /* NRRegistViewController.m */; };
 		525B669624E5812200CC7CC4 /* NRRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B669424E5812200CC7CC4 /* NRRegistViewController.xib */; };
+		52D94B5624E6CD7900D12171 /* NRKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D94B5524E6CD7900D12171 /* NRKeyChain.m */; };
 		83C966D824D404D000913065 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966D724D404D000913065 /* AppDelegate.m */; };
 		83C966DB24D404D000913065 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966DA24D404D000913065 /* SceneDelegate.m */; };
 		83C966E124D404D000913065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C966DF24D404D000913065 /* Main.storyboard */; };
@@ -49,6 +50,8 @@
 		525B669224E5812200CC7CC4 /* NRRegistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRRegistViewController.h; sourceTree = "<group>"; };
 		525B669324E5812200CC7CC4 /* NRRegistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRRegistViewController.m; sourceTree = "<group>"; };
 		525B669424E5812200CC7CC4 /* NRRegistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRRegistViewController.xib; sourceTree = "<group>"; };
+		52D94B5424E6CD7900D12171 /* NRKeyChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRKeyChain.h; sourceTree = "<group>"; };
+		52D94B5524E6CD7900D12171 /* NRKeyChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRKeyChain.m; sourceTree = "<group>"; };
 		83C966D324D404D000913065 /* NRNameAndPwdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRNameAndPwdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C966D624D404D000913065 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83C966D724D404D000913065 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,6 +134,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		52D94B5324E6CCE500D12171 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				52D94B5424E6CD7900D12171 /* NRKeyChain.h */,
+				52D94B5524E6CD7900D12171 /* NRKeyChain.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		83C966CA24D404D000913065 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,7 @@
 		83C966F724D4095F00913065 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				52D94B5324E6CCE500D12171 /* Keychain */,
 				525B663E24E393FF00CC7CC4 /* SMSCode */,
 				525B663824E35EAA00CC7CC4 /* AutoFill */,
 				83C966F824D4097200913065 /* FaceIdOrTouchID */,
@@ -282,6 +295,7 @@
 				525B664224E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m in Sources */,
 				83C9670024D4172A00913065 /* NRMainViewController.m in Sources */,
 				525B669024E57DA600CC7CC4 /* NRTextInputViewController.m in Sources */,
+				52D94B5624E6CD7900D12171 /* NRKeyChain.m in Sources */,
 				83C966D824D404D000913065 /* AppDelegate.m in Sources */,
 				525B668C24E42BAD00CC7CC4 /* NRLoginModel.m in Sources */,
 				83C966DB24D404D000913065 /* SceneDelegate.m in Sources */,

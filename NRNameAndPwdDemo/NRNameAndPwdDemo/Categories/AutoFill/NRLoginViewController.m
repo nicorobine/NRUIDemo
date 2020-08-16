@@ -9,6 +9,7 @@
 #import "NRLoginViewController.h"
 #import "NRTextInputViewController.h"
 #import "NRLoginModel.h"
+#import "NRKeyChain.h"
 
 @interface NRLoginViewController () <UITextFieldDelegate>
 {
@@ -18,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *accountField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;
+@property (weak, nonatomic) IBOutlet UIButton *siginButton;
 
 @end
 
@@ -35,7 +37,7 @@
 
 - (void)nr_initial {
     __weak typeof(self) weakSelf = self;
-    _onStateChange = ^(NSString * _Nullable userName, NSString * _Nullable pwd, NSString * _Nullable passwordRules, BOOL startLogi) {
+    _onStateChange = ^(NSString * _Nullable userName, NSString * _Nullable pwd, NSString * _Nullable passwordRules, NRLoginState logiState) {
         weakSelf.pwdField.passwordRules = [UITextInputPasswordRules passwordRulesWithDescriptor:passwordRules];
     };
     [self loginModel];
@@ -44,7 +46,11 @@
 #pragma mark - Actions
 
 - (IBAction)login:(UIButton *)sender {
-    
+    [_loginModel autoLoginWhenNoCredentialsAccount:^NSString * _Nonnull{
+        return self.accountField.text;
+    } password:^NSString * _Nonnull{
+        return self.pwdField.text;
+    }];
 }
 
 - (IBAction)updatePasswordRule:(id)sender {
@@ -67,6 +73,7 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSLog(@"fullText: %@,\nrange: %@,\nreplacementString: %@", textField.text, NSStringFromRange(range), string);
     NSLog(@"passwordRules: %@", _pwdField.passwordRules.passwordRulesDescriptor);
+    [_siginButton setUserInteractionEnabled:_accountField.text.length > 0 && _pwdField.text.length > 0];
     return YES;
 }
 
