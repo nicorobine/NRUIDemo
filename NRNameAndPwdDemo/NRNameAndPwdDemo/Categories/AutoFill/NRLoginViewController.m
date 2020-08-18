@@ -8,6 +8,8 @@
 
 #import "NRLoginViewController.h"
 #import "NRTextInputViewController.h"
+#import "NRRegistViewController.h"
+#import "NRTextInputViewController.h"
 #import "NRLoginModel.h"
 #import "NRKeyChain.h"
 
@@ -65,8 +67,20 @@
 
 
 - (IBAction)regist:(id)sender {
-    
+    NRRegistViewController* registVC = [[NRRegistViewController alloc] init];
+    registVC.title = @"注册";
+    [self.navigationController pushViewController:registVC animated:YES];
 }
+
+- (IBAction)clearCache:(id)sender {
+    [_loginModel clearKeychainCache];
+}
+
+- (IBAction)getCode:(id)sender {
+    NRTextInputViewController* textInputVC = [[NRTextInputViewController alloc] init];
+    [self.navigationController presentViewController:textInputVC animated:YES completion:nil];
+}
+
 
 #pragma mark - UITextFieldDelegate
 

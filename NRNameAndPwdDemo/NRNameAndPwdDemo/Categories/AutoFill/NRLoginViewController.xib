@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -71,6 +71,7 @@
                     <rect key="frame" x="352" y="318.5" width="19" height="22"/>
                     <state key="normal" image="lock.fill" catalog="system"/>
                     <connections>
+                        <action selector="getCode:" destination="-1" eventType="touchUpInside" id="u4U-AT-P0N"/>
                         <action selector="updatePasswordRule:" destination="-1" eventType="touchUpInside" id="eiL-hh-VoT"/>
                     </connections>
                 </button>
@@ -79,6 +80,13 @@
                     <state key="normal" title="注册"/>
                     <connections>
                         <action selector="regist:" destination="-1" eventType="touchUpInside" id="YhZ-Dz-ieP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOh-ni-kVr">
+                    <rect key="frame" x="165" y="416.5" width="84" height="30"/>
+                    <state key="normal" title="Clear Cache"/>
+                    <connections>
+                        <action selector="clearCache:" destination="-1" eventType="touchUpInside" id="h4S-bT-jrP"/>
                     </connections>
                 </button>
             </subviews>
@@ -91,6 +99,7 @@
                 <constraint firstItem="xkp-rx-YTt" firstAttribute="centerY" secondItem="tpR-t7-gBA" secondAttribute="centerY" id="IXY-3V-03H"/>
                 <constraint firstItem="tpR-t7-gBA" firstAttribute="leading" secondItem="85H-pd-rji" secondAttribute="leading" id="KF3-ut-hg5"/>
                 <constraint firstItem="85H-pd-rji" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="70" id="LKz-lY-SHH"/>
+                <constraint firstItem="iOh-ni-kVr" firstAttribute="top" secondItem="61t-vL-2b0" secondAttribute="bottom" constant="16" id="O0U-Ba-0vB"/>
                 <constraint firstItem="NrJ-1j-F62" firstAttribute="leading" secondItem="I0J-Rb-w3b" secondAttribute="leading" id="Qn1-JQ-LKX"/>
                 <constraint firstItem="tpR-t7-gBA" firstAttribute="top" secondItem="fKo-zp-Gi8" secondAttribute="bottom" constant="8" id="Tua-jV-9to"/>
                 <constraint firstItem="NrJ-1j-F62" firstAttribute="top" secondItem="I0J-Rb-w3b" secondAttribute="bottom" constant="8" id="Wne-tp-nar"/>
@@ -103,6 +112,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Sta-ty-eU1" secondAttribute="trailing" constant="70" id="rlj-V3-oJY"/>
                 <constraint firstItem="xkp-rx-YTt" firstAttribute="leading" secondItem="tpR-t7-gBA" secondAttribute="trailing" constant="8" id="sw3-kA-Zve"/>
                 <constraint firstItem="fKo-zp-Gi8" firstAttribute="leading" secondItem="85H-pd-rji" secondAttribute="leading" id="wvi-U1-6Oa"/>
+                <constraint firstItem="iOh-ni-kVr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xMo-dC-zQ2"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="IG9-jv-n2H" secondAttribute="trailing" constant="24" id="z3C-Bm-nX4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

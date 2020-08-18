@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class LAContext;
+
 typedef NS_ENUM(NSUInteger, NRLoginState) {
     NRLoginStateDefault,
     NRLoginStateLogginngIn,
@@ -20,6 +22,8 @@ typedef void (^OnStateChange)(NSString * _Nullable userName, NSString * _Nullabl
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NRLoginModel : NSObject
+
+@property (nonatomic, readonly) LAContext *context;
 
 @property (nonatomic, copy, nullable) NSString *userName;
 
@@ -48,6 +52,11 @@ NS_ASSUME_NONNULL_BEGIN
  * @param addCredential 是否加入钥匙串
  */
 - (void)logInWithAccount:(NSString *)account password:(NSString *)password addCredential:(BOOL)addCredential;
+
+/**
+ * @brief 清除钥匙串的数据
+ */
+- (void)clearKeychainCache;
 
 - (instancetype)initWithStateChange:(OnStateChange)change;
 

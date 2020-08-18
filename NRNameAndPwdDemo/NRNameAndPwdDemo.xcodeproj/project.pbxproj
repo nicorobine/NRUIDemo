@@ -18,6 +18,7 @@
 		525B669524E5812200CC7CC4 /* NRRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B669324E5812200CC7CC4 /* NRRegistViewController.m */; };
 		525B669624E5812200CC7CC4 /* NRRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B669424E5812200CC7CC4 /* NRRegistViewController.xib */; };
 		52D94B5624E6CD7900D12171 /* NRKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D94B5524E6CD7900D12171 /* NRKeyChain.m */; };
+		83918E6724EBA050004B36D3 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C966F524D4056000913065 /* LocalAuthentication.framework */; };
 		83C966D824D404D000913065 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966D724D404D000913065 /* AppDelegate.m */; };
 		83C966DB24D404D000913065 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966DA24D404D000913065 /* SceneDelegate.m */; };
 		83C966E124D404D000913065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C966DF24D404D000913065 /* Main.storyboard */; };
@@ -26,11 +27,11 @@
 		83C966E924D404D500913065 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C966E724D404D500913065 /* LaunchScreen.storyboard */; };
 		83C966EC24D404D500913065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966EB24D404D500913065 /* main.m */; };
 		83C966F424D4055600913065 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C966F324D4055600913065 /* AuthenticationServices.framework */; };
-		83C966F624D4056000913065 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C966F524D4056000913065 /* LocalAuthentication.framework */; };
 		83C966FC24D409C300913065 /* NRBiometricLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966FA24D409C300913065 /* NRBiometricLoginViewController.m */; };
 		83C966FD24D409C300913065 /* NRBiometricLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C966FB24D409C300913065 /* NRBiometricLoginViewController.xib */; };
 		83C9670024D4172A00913065 /* NRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966FF24D4172A00913065 /* NRMainViewController.m */; };
 		83C9670324D4182800913065 /* NRMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C9670224D4182800913065 /* NRMainModel.m */; };
+		83F8C50324EBC406002A7720 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F8C50224EBC406002A7720 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		83C9670124D4182800913065 /* NRMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRMainModel.h; sourceTree = "<group>"; };
 		83C9670224D4182800913065 /* NRMainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMainModel.m; sourceTree = "<group>"; };
 		83C9670424D4224900913065 /* NRNameAndPwdDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NRNameAndPwdDemo.entitlements; sourceTree = "<group>"; };
+		83F8C50224EBC406002A7720 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C966F624D4056000913065 /* LocalAuthentication.framework in Frameworks */,
+				83F8C50324EBC406002A7720 /* CloudKit.framework in Frameworks */,
+				83918E6724EBA050004B36D3 /* LocalAuthentication.framework in Frameworks */,
 				83C966F424D4055600913065 /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +189,7 @@
 		83C966F224D4055600913065 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83F8C50224EBC406002A7720 /* CloudKit.framework */,
 				83C966F524D4056000913065 /* LocalAuthentication.framework */,
 				83C966F324D4055600913065 /* AuthenticationServices.framework */,
 			);
@@ -450,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jzxl.project.wwt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,7 +473,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jzxl.project.wwt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

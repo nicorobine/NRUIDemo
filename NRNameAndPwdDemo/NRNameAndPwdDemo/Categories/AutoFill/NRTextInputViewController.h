@@ -10,10 +10,11 @@
 
 @class NRTextInputViewController;
 
-typedef void (^OnDone)(NRTextInputViewController* controller, NSString *text);
+typedef void (^OnDone)(NRTextInputViewController* _Nonnull controller, NSString * _Nullable text);
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 用来测试短信验证码
 @interface NRTextInputViewController : UIViewController
 
 @property (nonatomic, copy) NSString* initialText;

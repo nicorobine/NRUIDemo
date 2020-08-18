@@ -9,6 +9,7 @@
 #import "NRKeyChain.h"
 #import <CoreFoundation/CoreFoundation.h>
 #import <Security/Security.h>
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @implementation NRKeyChain
 
@@ -74,6 +75,57 @@
     return result;
 }
 
+- (BOOL)updateAccountAndPasswordWithDomain:(NSString *)domain secClassValue:(NRSecClassValue)secClassValue withNewAccount:(nonnull NSString *)newAccount andPassword:(nonnull NSString *)password {
+    
+    CFMutableDictionaryRef query = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, nil, nil);
+    CFDictionaryAddValue(query, kSecAttrServer, (__bridge CFStringRef)domain);
+    CFDictionaryAddValue(query, kSecClass, [self nr_convertSecValue:secClassValue]);
+    
+    CFMutableDictionaryRef attributesToUpdate = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 2, nil, nil);
+    CFDictionaryAddValue(attributesToUpdate, kSecAttrAccount, (__bridge CFStringRef)newAccount);
+    CFDictionaryAddValue(attributesToUpdate, kSecValueData, (__bridge CFDataRef)[password dataUsingEncoding:NSUTF8StringEncoding]);
+    
+    OSStatus status = SecItemUpdate(query, attributesToUpdate);
+    
+    return errSecSuccess == status;
+}
+
+- (BOOL)deleteAccountAndPasswordWithDomain:(NSString *)domain secClassValue:(NRSecClassValue)secClassValue {
+    CFMutableDictionaryRef query = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, nil, nil);
+    CFDictionaryAddValue(query, kSecAttrServer, (__bridge CFStringRef)domain);
+    CFDictionaryAddValue(query, kSecClass, [self nr_convertSecValue:secClassValue]);
+    
+    OSStatus status = SecItemDelete(query);
+    
+    return errSecSuccess == status;
+}
+
+#pragma mark - 结合LocalAuthentication
+
+- (BOOL)addAccount:(NSString *)account password:(NSString *)password domain:(NSString * _Nullable)domain secClassValue:(NRSecClassValue)secClassValue context:(LAContext *)context {
+    
+    // 只有设备设置了密码才可以访问
+    // 可以使用Touch ID或者Face ID访问
+    SecAccessControlRef accessControl = SecAccessControlCreateWithFlags(nil, kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly, kSecAccessControlUserPresence, nil);
+    
+    CFMutableDictionaryRef attributes = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, nil, nil);
+    CFDictionaryAddValue(attributes, kSecAttrAccessControl, accessControl);
+    CFDictionaryAddValue(attributes, kSecUseAuthenticationContext, (__bridge CFTypeRef)context);
+    CFDictionarySetValue(attributes, kSecClass, [self nr_convertSecValue:secClassValue]);
+    if (account) {
+        CFDictionarySetValue(attributes, kSecAttrAccount, (__bridge CFStringRef)account);
+    }
+    if (password) {
+        NSData* passwordData = [password dataUsingEncoding:NSUTF8StringEncoding];
+        CFDictionarySetValue(attributes, kSecValueData, (__bridge CFDataRef)passwordData);
+    }
+    if (domain && NRSecClassValueInternetPassword == secClassValue) {
+        CFDictionarySetValue(attributes, kSecAttrServer, (__bridge CFStringRef)domain);
+    }
+    
+    return SecItemAdd(attributes, nil) == errSecSuccess;
+}
+
 #pragma mark - Private
 
 - (CFStringRef)nr_convertSecValue:(NRSecClassValue)secClassValue {
@@ -119,14 +171,14 @@
 
 - (NSString *)account {
     if ([_result isKindOfClass:[NSDictionary class]]) {
-        return [_result objectForKey:(__bridge NSString *)kSecAttrAccount)];
+        return [_result objectForKey:(__bridge NSString *)kSecAttrAccount];
     }
     return nil;
 }
 
 - (NSData *)passwordData {
     if ([_result isKindOfClass:[NSDictionary class]]) {
-        return [_result objectForKey:(__bridge NSString *)kSecValueData)];
+        return [_result objectForKey:(__bridge NSString *)kSecValueData];
     }
     return nil;
 }

@@ -8,8 +8,12 @@
 
 #import "NRLoginModel.h"
 #import "NRKeyChain.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface NRLoginModel()
+{
+    LAContext* _context;
+}
 
 @property (nonatomic, assign) NRLoginState loginState;
 
@@ -36,17 +40,25 @@
 #pragma mark - Private
 
 - (void)nr_setup {
+    _context = [[LAContext alloc] init];
+    // 锁屏验证成功后，10s内不需要再次验证
+    _context.touchIDAuthenticationAllowableReuseDuration = 10;
     _loginState = NRLoginStateDefault;
     self.passwordRules = @"required: upper, lower, digit, [-().&@?’#,/&quot;+]; mainlength: 8";
+}
+
+- (void)nr_updateState {
+    if (self.onStateChange) {
+        self.onStateChange(_userName, _pwd, _passwordRules, _loginState);
+    }
 }
 
 #pragma mark - Public
 
 - (BOOL)autoLoginWhenNoCredentialsAccount:(NSString * _Nonnull (^)(void))account password:(NSString * _Nonnull (^)(void))password {
     NRSecQueryResult* result = [[NRKeyChain shared] queryAccountAndPasswordWithDomain:self.domain secClassValue:NRSecClassValueInternetPassword];
-   
     if (result.hasItem) {
-        [self logInWithAccount:account() password:password() addCredential:NO];
+        [self logInWithAccount:result.account password:result.password addCredential:NO];
     } else {  // 没有查询到数据，证明还没有往钥匙串写入过
         [self logInWithAccount:account() password:password() addCredential:YES];
         return NO;
@@ -63,14 +75,12 @@
     
     // 将账号密码写入钥匙串
     if (addCredential) {
-        [[NRKeyChain shared] addAccount:account password:password domain:self.domain secClassValue:NRSecClassValueInternetPassword];
+        [[NRKeyChain shared] addAccount:account password:password domain:self.domain secClassValue:NRSecClassValueInternetPassword context:_context];
     }
 }
 
-- (void)nr_updateState {
-    if (self.onStateChange) {
-        self.onStateChange(_userName, _pwd, _passwordRules, _loginState);
-    }
+- (void)clearKeychainCache {
+    [[NRKeyChain shared] deleteAccountAndPasswordWithDomain:self.domain secClassValue:NRSecClassValueInternetPassword];
 }
 
 #pragma mark - Properties
@@ -97,6 +107,10 @@
 - (void)setLoginState:(NRLoginState)loginState {
     _loginState = loginState;
     [self nr_updateState];
+}
+
+- (LAContext *)context {
+    return _context;
 }
 
 @end

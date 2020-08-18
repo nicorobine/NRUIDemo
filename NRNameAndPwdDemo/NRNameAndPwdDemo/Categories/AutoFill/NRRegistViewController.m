@@ -17,9 +17,18 @@
 
 @implementation NRRegistViewController
 
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self nr_setup];
+}
+
+#pragma mark - Private
+
+- (void)nr_setup {
+    self.passwordField.secureTextEntry = YES;
+    self.passwordField.passwordRules = [UITextInputPasswordRules passwordRulesWithDescriptor:@"required: upper; required: lower; required: digit; required: [-().&@?'#,/&quot;+]; max-consecutive: 2; minlength: 8;"];
 }
 
 #pragma mark - Actions

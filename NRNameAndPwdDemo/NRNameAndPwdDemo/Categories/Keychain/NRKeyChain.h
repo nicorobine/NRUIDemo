@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class LAContext;
+
 //extern const CFStringRef kSecClassInternetPassword
 //    API_AVAILABLE(macos(10.6), ios(2.0));
 //extern const CFStringRef kSecClassGenericPassword
@@ -35,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shared;
 
+#pragma mark - 普通钥匙串存储
+
 /**
  * @brief 向钥匙串写入账号和密码
  * @param account 账号
@@ -47,8 +51,41 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @brief 查询已经存储的项目
+ * @param domain 要查询的域名
+ * @param secClassValue 储存类型
  */
 - (NRSecQueryResult *)queryAccountAndPasswordWithDomain:(NSString *)domain secClassValue:(NRSecClassValue)secClassValue;
+
+/**
+ * @brief 更新储存的账号和密码
+ * @param domain 对应的域名
+ * @param secClassValue 类型
+ * @param newAccount 新的账号
+ * @param password 新的密码
+ * @return 更新成功或者失败，如果原来没有存储对应的项目返回失败，更新成功返回成功
+ */
+- (BOOL)updateAccountAndPasswordWithDomain:(NSString *)domain secClassValue:(NRSecClassValue)secClassValue  withNewAccount:(NSString *)newAccount andPassword:(NSString *)password;
+
+/**
+ * @brief 删除指定的项目
+ * @param domain 对应的域名
+ * @param secClassValue 类型
+ * @return 是否删除成功
+ * @discussion 项目删除失败或者没有找到项目都会返回失败
+ */
+- (BOOL)deleteAccountAndPasswordWithDomain:(NSString *)domain secClassValue:(NRSecClassValue)secClassValue;
+
+#pragma mark - 结合LocalAuthentication，钥匙串保存项目时设置条件，如生物验证
+
+/**
+ * @brief 向钥匙串写入账号和密码
+ * @param account 账号
+ * @param password 密码
+ * @param domain 域名，如www.nicorobine.com，可以为空，如果是NRSecClassValueGenericPassword，则域名无效
+ * @param secClassValue 存储类型，这个方法支持NRSecClassValueInternetPassword和NRSecClassValueGenericPassword
+ * @return 返回添加的状态
+ */
+- (BOOL)addAccount:(NSString *)account password:(NSString *)password domain:(NSString * _Nullable)domain secClassValue:(NRSecClassValue)secClassValue context:(LAContext *)context;
 
 @end
 
