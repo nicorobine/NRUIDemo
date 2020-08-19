@@ -30,6 +30,13 @@
     [self.collectionView registerNib:reuseNib forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([NRCollectionReusableView class])];
 }
 
+#pragma mark - Actions
+
+// 设置模式
+- (IBAction)onSet:(id)sender {
+    
+}
+
 
 #pragma mark <UICollectionViewDataSource>
 

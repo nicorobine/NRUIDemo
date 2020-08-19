@@ -21,6 +21,7 @@
 		83F8C50724ECC020002A7720 /* NRCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C50524ECC020002A7720 /* NRCollectionReusableView.m */; };
 		83F8C50824ECC020002A7720 /* NRCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F8C50624ECC020002A7720 /* NRCollectionReusableView.xib */; };
 		83F8C50B24ECC7E0002A7720 /* UIColor+NRColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C50A24ECC7E0002A7720 /* UIColor+NRColors.m */; };
+		83F8C50F24ECEBE0002A7720 /* NRColorSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C50D24ECEBE0002A7720 /* NRColorSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		83F8C50624ECC020002A7720 /* NRCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRCollectionReusableView.xib; sourceTree = "<group>"; };
 		83F8C50924ECC7E0002A7720 /* UIColor+NRColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+NRColors.h"; sourceTree = "<group>"; };
 		83F8C50A24ECC7E0002A7720 /* UIColor+NRColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NRColors.m"; sourceTree = "<group>"; };
+		83F8C50C24ECEBDF002A7720 /* NRColorSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRColorSettingViewController.h; sourceTree = "<group>"; };
+		83F8C50D24ECEBE0002A7720 /* NRColorSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRColorSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				83F8C50624ECC020002A7720 /* NRCollectionReusableView.xib */,
 				83F8C50924ECC7E0002A7720 /* UIColor+NRColors.h */,
 				83F8C50A24ECC7E0002A7720 /* UIColor+NRColors.m */,
+				83F8C50C24ECEBDF002A7720 /* NRColorSettingViewController.h */,
+				83F8C50D24ECEBE0002A7720 /* NRColorSettingViewController.m */,
 			);
 			path = NRColorDemo;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				52D94B7624EC0F2C00D12171 /* main.m in Sources */,
 				83F8C50724ECC020002A7720 /* NRCollectionReusableView.m in Sources */,
 				52D94B6824EC0F2C00D12171 /* SceneDelegate.m in Sources */,
+				83F8C50F24ECEBE0002A7720 /* NRColorSettingViewController.m in Sources */,
 				83F8C50B24ECC7E0002A7720 /* UIColor+NRColors.m in Sources */,
 				52D94B9B24EC106400D12171 /* NRCollectionViewCell.m in Sources */,
 			);

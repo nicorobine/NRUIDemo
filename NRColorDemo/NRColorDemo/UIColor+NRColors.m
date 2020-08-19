@@ -10,6 +10,10 @@
 
 @implementation UIColor (NRColors)
 
++ (BOOL)isDarkMode {
+    return UIUserInterfaceStyleDark == UITraitCollection.currentTraitCollection.userInterfaceStyle;
+}
+
 + (UIColor *)nr_customColor {
     return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
         return UIUserInterfaceStyleDark == traitCollection.userInterfaceStyle ? [UIColor colorWithWhite:0.8 alpha:1] : [UIColor colorWithWhite:0.9 alpha:1] ;
