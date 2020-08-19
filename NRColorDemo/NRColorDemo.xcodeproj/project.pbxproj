@@ -18,6 +18,9 @@
 		52D94B9B24EC106400D12171 /* NRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D94B9924EC106400D12171 /* NRCollectionViewCell.m */; };
 		52D94B9C24EC106400D12171 /* NRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D94B9A24EC106400D12171 /* NRCollectionViewCell.xib */; };
 		52D94B9F24EC12E000D12171 /* NRCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D94B9E24EC12E000D12171 /* NRCollectionViewController.m */; };
+		83F8C50724ECC020002A7720 /* NRCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C50524ECC020002A7720 /* NRCollectionReusableView.m */; };
+		83F8C50824ECC020002A7720 /* NRCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F8C50624ECC020002A7720 /* NRCollectionReusableView.xib */; };
+		83F8C50B24ECC7E0002A7720 /* UIColor+NRColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F8C50A24ECC7E0002A7720 /* UIColor+NRColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,11 @@
 		52D94B9A24EC106400D12171 /* NRCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRCollectionViewCell.xib; sourceTree = "<group>"; };
 		52D94B9D24EC12E000D12171 /* NRCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRCollectionViewController.h; sourceTree = "<group>"; };
 		52D94B9E24EC12E000D12171 /* NRCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRCollectionViewController.m; sourceTree = "<group>"; };
+		83F8C50424ECC020002A7720 /* NRCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRCollectionReusableView.h; sourceTree = "<group>"; };
+		83F8C50524ECC020002A7720 /* NRCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRCollectionReusableView.m; sourceTree = "<group>"; };
+		83F8C50624ECC020002A7720 /* NRCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRCollectionReusableView.xib; sourceTree = "<group>"; };
+		83F8C50924ECC7E0002A7720 /* UIColor+NRColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+NRColors.h"; sourceTree = "<group>"; };
+		83F8C50A24ECC7E0002A7720 /* UIColor+NRColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NRColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,11 @@
 				52D94B9A24EC106400D12171 /* NRCollectionViewCell.xib */,
 				52D94B9D24EC12E000D12171 /* NRCollectionViewController.h */,
 				52D94B9E24EC12E000D12171 /* NRCollectionViewController.m */,
+				83F8C50424ECC020002A7720 /* NRCollectionReusableView.h */,
+				83F8C50524ECC020002A7720 /* NRCollectionReusableView.m */,
+				83F8C50624ECC020002A7720 /* NRCollectionReusableView.xib */,
+				83F8C50924ECC7E0002A7720 /* UIColor+NRColors.h */,
+				83F8C50A24ECC7E0002A7720 /* UIColor+NRColors.m */,
 			);
 			path = NRColorDemo;
 			sourceTree = "<group>";
@@ -252,6 +265,7 @@
 				52D94B7324EC0F2C00D12171 /* LaunchScreen.storyboard in Resources */,
 				52D94B7024EC0F2C00D12171 /* Assets.xcassets in Resources */,
 				52D94B6E24EC0F2C00D12171 /* Main.storyboard in Resources */,
+				83F8C50824ECC020002A7720 /* NRCollectionReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +293,9 @@
 				52D94B6524EC0F2C00D12171 /* AppDelegate.m in Sources */,
 				52D94B9F24EC12E000D12171 /* NRCollectionViewController.m in Sources */,
 				52D94B7624EC0F2C00D12171 /* main.m in Sources */,
+				83F8C50724ECC020002A7720 /* NRCollectionReusableView.m in Sources */,
 				52D94B6824EC0F2C00D12171 /* SceneDelegate.m in Sources */,
+				83F8C50B24ECC7E0002A7720 /* UIColor+NRColors.m in Sources */,
 				52D94B9B24EC106400D12171 /* NRCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,11 +468,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NEFN7ET24B;
 				INFOPLIST_FILE = NRColorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.NRColorDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,11 +486,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NEFN7ET24B;
 				INFOPLIST_FILE = NRColorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.NRColorDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

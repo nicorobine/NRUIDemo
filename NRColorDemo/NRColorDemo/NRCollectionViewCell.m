@@ -14,4 +14,10 @@
     [super awakeFromNib];
 }
 
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    [self.titleLabel setTextColor:[UIColor labelColor]];
+    [self setBackgroundColor:[UIColor systemBackgroundColor]];
+}
+
 @end
