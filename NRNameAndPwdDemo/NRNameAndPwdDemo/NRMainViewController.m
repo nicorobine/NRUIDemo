@@ -12,6 +12,7 @@
 #import "NRLoginViewController.h"
 #import "NRBiometricLoginViewController.h"
 #import "NRAppleIDLoginViewController.h"
+#import "NRSSOLoginViewController.h"
 
 @interface NRMainViewController ()
 
@@ -43,6 +44,9 @@
             case 2:
                 [weakSelf nr_toAppleIDLogin:info];
                 break;
+            case 3:
+                [weakSelf nr_toSSOLogin:info];
+                break;
             default:
                 
                 break;
@@ -65,6 +69,11 @@
 - (void)nr_toAppleIDLogin:(NRCellInfo *)info {
     NRAppleIDLoginViewController* appleIdLogin = [[NRAppleIDLoginViewController alloc] init];
     [self _showDefualt:appleIdLogin info:info];
+}
+
+- (void)nr_toSSOLogin:(NRCellInfo *)info {
+    NRSSOLoginViewController* ssoVC = [NRSSOLoginViewController new];
+    [self _showDefualt:ssoVC info:info];
 }
 
 - (void)_showDefualt:(UIViewController *)vc info:(NRCellInfo *)info {

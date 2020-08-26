@@ -44,12 +44,12 @@
     [self.loginProviderStackView addArrangedSubview:authorizationAppleIDButton];
     
     UIButton* passwordButton = [[UIButton alloc] init];
-    [passwordButton setTitle:@"使用密码登录" forState:UIControlStateNormal];
+    [passwordButton setTitle:@"Password-Based Login" forState:UIControlStateNormal];
     [passwordButton addTarget:self action:@selector(nr_handleAuthorizationPassword) forControlEvents:UIControlEventTouchUpInside];
     [self.loginProviderStackView addArrangedSubview:passwordButton];
     
     UIButton* webAuthorizationButton = [[UIButton alloc] init];
-    [webAuthorizationButton setTitle:@"使用Web验证" forState:UIControlStateNormal];
+    [webAuthorizationButton setTitle:@"Web-Based Login" forState:UIControlStateNormal];
     [webAuthorizationButton addTarget:self action:@selector(nr_handleAuthorizationWeb) forControlEvents:UIControlEventTouchUpInside];
     [self.loginProviderStackView addArrangedSubview:webAuthorizationButton];
 }

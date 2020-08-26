@@ -38,6 +38,7 @@
     [_datas addObject:[[NRCellInfo alloc] initWithTitle:@"FaceIdOrTouchId" subTitle:@"直接使用FaceId或者TouchId登录，只能校验成功与否"]];
     [_datas addObject:[[NRCellInfo alloc] initWithTitle:@"自动填充账号密码" subTitle:@"使用keyChain管理账号密码，同时可以实现Web的账号密码填充"]];
     [_datas addObject:[[NRCellInfo alloc] initWithTitle:@"Apple ID Login" subTitle:@"使用Apple ID进行登录(企业账号不支持，暂时没有办法测试)"]];
+    [_datas addObject:[[NRCellInfo alloc] initWithTitle:@"Single Sign-On" subTitle:@"使用指定URL单点登录，可以使用Authentication extension"]];
 }
 
 #pragma mark - Public

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5225652D24F6A8440002DDB5 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C966F324D4055600913065 /* AuthenticationServices.framework */; };
+		5225653124F6A8440002DDB5 /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5225653024F6A8440002DDB5 /* AuthenticationViewController.m */; };
+		5225653424F6A8440002DDB5 /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5225653224F6A8440002DDB5 /* AuthenticationViewController.xib */; };
+		5225653824F6A8440002DDB5 /* AuthenticationServices.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5225652C24F6A8440002DDB5 /* AuthenticationServices.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5225654124F6AB860002DDB5 /* NRSSOLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5225653F24F6AB860002DDB5 /* NRSSOLoginViewController.m */; };
+		5225654224F6AB860002DDB5 /* NRSSOLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5225654024F6AB860002DDB5 /* NRSSOLoginViewController.xib */; };
 		525B663C24E35ECF00CC7CC4 /* NRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B663A24E35ECF00CC7CC4 /* NRLoginViewController.m */; };
 		525B663D24E35ECF00CC7CC4 /* NRLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525B663B24E35ECF00CC7CC4 /* NRLoginViewController.xib */; };
 		525B664224E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B664024E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m */; };
@@ -39,7 +45,39 @@
 		83F8C50324EBC406002A7720 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F8C50224EBC406002A7720 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5225653624F6A8440002DDB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83C966CB24D404D000913065 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5225652B24F6A8440002DDB5;
+			remoteInfo = AuthenticationServices;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5225653924F6A8440002DDB5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5225653824F6A8440002DDB5 /* AuthenticationServices.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5225652C24F6A8440002DDB5 /* AuthenticationServices.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AuthenticationServices.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5225652F24F6A8440002DDB5 /* AuthenticationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
+		5225653024F6A8440002DDB5 /* AuthenticationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
+		5225653324F6A8440002DDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AuthenticationViewController.xib; sourceTree = "<group>"; };
+		5225653524F6A8440002DDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5225653E24F6AB860002DDB5 /* NRSSOLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRSSOLoginViewController.h; sourceTree = "<group>"; };
+		5225653F24F6AB860002DDB5 /* NRSSOLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRSSOLoginViewController.m; sourceTree = "<group>"; };
+		5225654024F6AB860002DDB5 /* NRSSOLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRSSOLoginViewController.xib; sourceTree = "<group>"; };
 		525B663924E35ECF00CC7CC4 /* NRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRLoginViewController.h; sourceTree = "<group>"; };
 		525B663A24E35ECF00CC7CC4 /* NRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRLoginViewController.m; sourceTree = "<group>"; };
 		525B663B24E35ECF00CC7CC4 /* NRLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRLoginViewController.xib; sourceTree = "<group>"; };
@@ -91,6 +129,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5225652924F6A8440002DDB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5225652D24F6A8440002DDB5 /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83C966D024D404D000913065 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +150,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5225652E24F6A8440002DDB5 /* AuthenticationServices */ = {
+			isa = PBXGroup;
+			children = (
+				5225652F24F6A8440002DDB5 /* AuthenticationViewController.h */,
+				5225653024F6A8440002DDB5 /* AuthenticationViewController.m */,
+				5225653224F6A8440002DDB5 /* AuthenticationViewController.xib */,
+				5225653524F6A8440002DDB5 /* Info.plist */,
+			);
+			path = AuthenticationServices;
+			sourceTree = "<group>";
+		};
+		5225653D24F6AB4E0002DDB5 /* SSOLogin */ = {
+			isa = PBXGroup;
+			children = (
+				5225653E24F6AB860002DDB5 /* NRSSOLoginViewController.h */,
+				5225653F24F6AB860002DDB5 /* NRSSOLoginViewController.m */,
+				5225654024F6AB860002DDB5 /* NRSSOLoginViewController.xib */,
+			);
+			path = SSOLogin;
+			sourceTree = "<group>";
+		};
 		525B663824E35EAA00CC7CC4 /* AutoFill */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				83C966D524D404D000913065 /* NRNameAndPwdDemo */,
+				5225652E24F6A8440002DDB5 /* AuthenticationServices */,
 				83C966D424D404D000913065 /* Products */,
 				83C966F224D4055600913065 /* Frameworks */,
 			);
@@ -195,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				83C966D324D404D000913065 /* NRNameAndPwdDemo.app */,
+				5225652C24F6A8440002DDB5 /* AuthenticationServices.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,6 +304,7 @@
 		83C966F724D4095F00913065 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				5225653D24F6AB4E0002DDB5 /* SSOLogin */,
 				83296F7924F5F8010082A6E4 /* AppleIDLogin */,
 				52D94B5324E6CCE500D12171 /* Keychain */,
 				525B663E24E393FF00CC7CC4 /* SMSCode */,
@@ -257,6 +327,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5225652B24F6A8440002DDB5 /* AuthenticationServices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5225653C24F6A8440002DDB5 /* Build configuration list for PBXNativeTarget "AuthenticationServices" */;
+			buildPhases = (
+				5225652824F6A8440002DDB5 /* Sources */,
+				5225652924F6A8440002DDB5 /* Frameworks */,
+				5225652A24F6A8440002DDB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuthenticationServices;
+			productName = AuthenticationServices;
+			productReference = 5225652C24F6A8440002DDB5 /* AuthenticationServices.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		83C966D224D404D000913065 /* NRNameAndPwdDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83C966EF24D404D500913065 /* Build configuration list for PBXNativeTarget "NRNameAndPwdDemo" */;
@@ -264,10 +351,12 @@
 				83C966CF24D404D000913065 /* Sources */,
 				83C966D024D404D000913065 /* Frameworks */,
 				83C966D124D404D000913065 /* Resources */,
+				5225653924F6A8440002DDB5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5225653724F6A8440002DDB5 /* PBXTargetDependency */,
 			);
 			name = NRNameAndPwdDemo;
 			productName = NRNameAndPwdDemo;
@@ -283,6 +372,9 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Nicorobine;
 				TargetAttributes = {
+					5225652B24F6A8440002DDB5 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					83C966D224D404D000913065 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -302,11 +394,20 @@
 			projectRoot = "";
 			targets = (
 				83C966D224D404D000913065 /* NRNameAndPwdDemo */,
+				5225652B24F6A8440002DDB5 /* AuthenticationServices */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5225652A24F6A8440002DDB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5225653424F6A8440002DDB5 /* AuthenticationViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83C966D124D404D000913065 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +415,7 @@
 				525B669624E5812200CC7CC4 /* NRRegistViewController.xib in Resources */,
 				525B663D24E35ECF00CC7CC4 /* NRLoginViewController.xib in Resources */,
 				83C966E924D404D500913065 /* LaunchScreen.storyboard in Resources */,
+				5225654224F6AB860002DDB5 /* NRSSOLoginViewController.xib in Resources */,
 				83C966FD24D409C300913065 /* NRBiometricLoginViewController.xib in Resources */,
 				83C966E624D404D500913065 /* Assets.xcassets in Resources */,
 				83296F8824F5F87C0082A6E4 /* NRAppleIDLoginResultViewController.xib in Resources */,
@@ -327,6 +429,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5225652824F6A8440002DDB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5225653124F6A8440002DDB5 /* AuthenticationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83C966CF24D404D000913065 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +445,7 @@
 				83C966EC24D404D500913065 /* main.m in Sources */,
 				83C966FC24D409C300913065 /* NRBiometricLoginViewController.m in Sources */,
 				525B663C24E35ECF00CC7CC4 /* NRLoginViewController.m in Sources */,
+				5225654124F6AB860002DDB5 /* NRSSOLoginViewController.m in Sources */,
 				83C966E424D404D000913065 /* NRNameAndPwdDemo.xcdatamodeld in Sources */,
 				525B664224E3943500CC7CC4 /* NRSMSOneTimeCodeViewController.m in Sources */,
 				83296F8724F5F87C0082A6E4 /* NRAppleIDLoginResultViewController.m in Sources */,
@@ -353,7 +464,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5225653724F6A8440002DDB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5225652B24F6A8440002DDB5 /* AuthenticationServices */;
+			targetProxy = 5225653624F6A8440002DDB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		5225653224F6A8440002DDB5 /* AuthenticationViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5225653324F6A8440002DDB5 /* Base */,
+			);
+			name = AuthenticationViewController.xib;
+			sourceTree = "<group>";
+		};
 		83C966DF24D404D000913065 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -373,6 +500,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5225653A24F6A8440002DDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = AuthenticationServices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt.AuthenticationServices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5225653B24F6A8440002DDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = AuthenticationServices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt.AuthenticationServices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		83C966ED24D404D500913065 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -524,6 +689,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5225653C24F6A8440002DDB5 /* Build configuration list for PBXNativeTarget "AuthenticationServices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5225653A24F6A8440002DDB5 /* Debug */,
+				5225653B24F6A8440002DDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83C966CE24D404D000913065 /* Build configuration list for PBXProject "NRNameAndPwdDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
