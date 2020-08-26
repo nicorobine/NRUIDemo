@@ -24,7 +24,7 @@
     return sharedKeyChain;
 }
 
-- (BOOL)addAccount:(NSString *)account password:(NSString *)password domain:(NSString *)domain secClassValue:(NRSecClassValue)secClassValue  {
+- (BOOL)addAccount:(NSString *)account password:(NSString * _Nullable)password domain:(NSString *)domain secClassValue:(NRSecClassValue)secClassValue  {
     CFMutableDictionaryRef attributes = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, nil, nil);
     
     CFDictionarySetValue(attributes, kSecClass, [self nr_convertSecValue:secClassValue]);
@@ -102,7 +102,7 @@
 
 #pragma mark - 结合LocalAuthentication
 
-- (BOOL)addAccount:(NSString *)account password:(NSString *)password domain:(NSString * _Nullable)domain secClassValue:(NRSecClassValue)secClassValue context:(LAContext *)context {
+- (BOOL)addAccount:(NSString *)account password:(NSString * _Nullable)password domain:(NSString * _Nullable)domain secClassValue:(NRSecClassValue)secClassValue context:(LAContext *)context {
     
     // 只有设备设置了密码才可以访问
     // 可以使用Touch ID或者Face ID访问

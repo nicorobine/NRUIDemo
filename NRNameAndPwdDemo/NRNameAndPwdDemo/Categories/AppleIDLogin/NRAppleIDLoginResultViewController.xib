@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NRAppleIDLoginResultViewController">
+            <connections>
+                <outlet property="emailLabel" destination="RFu-It-rQB" id="QrQ-gQ-xPe"/>
+                <outlet property="familyNameLabel" destination="X1Z-HX-re3" id="XBA-p1-zc0"/>
+                <outlet property="givenNameLabel" destination="csS-Ur-2Pp" id="yqA-Fu-79A"/>
+                <outlet property="userIdentifierLabel" destination="Dum-Aa-ljR" id="Kuf-Qn-SPu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Identifier:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dum-Aa-ljR">
+                    <rect key="frame" x="32" y="104" width="350" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Given Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csS-Ur-2Pp">
+                    <rect key="frame" x="32" y="141" width="350" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1Z-HX-re3">
+                    <rect key="frame" x="32" y="178" width="350" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFu-It-rQB">
+                    <rect key="frame" x="32" y="215" width="350" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jU6-F5-RUT">
+                    <rect key="frame" x="175.5" y="280" width="63" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Sign Out"/>
+                    <connections>
+                        <action selector="signOut:" destination="-1" eventType="touchUpInside" id="Q2B-Sm-bYn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Dum-Aa-ljR" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="56P-t8-96h"/>
+                <constraint firstItem="csS-Ur-2Pp" firstAttribute="top" secondItem="Dum-Aa-ljR" secondAttribute="bottom" constant="16" id="7ju-2C-G8l"/>
+                <constraint firstItem="csS-Ur-2Pp" firstAttribute="trailing" secondItem="Dum-Aa-ljR" secondAttribute="trailing" id="N5v-TG-zq8"/>
+                <constraint firstItem="RFu-It-rQB" firstAttribute="trailing" secondItem="Dum-Aa-ljR" secondAttribute="trailing" id="NJX-OS-QqV"/>
+                <constraint firstItem="jU6-F5-RUT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YXr-HR-kFs"/>
+                <constraint firstItem="csS-Ur-2Pp" firstAttribute="leading" secondItem="Dum-Aa-ljR" secondAttribute="leading" id="cWA-TW-k0l"/>
+                <constraint firstItem="X1Z-HX-re3" firstAttribute="top" secondItem="csS-Ur-2Pp" secondAttribute="bottom" constant="16" id="f6T-Bb-P1b"/>
+                <constraint firstItem="jU6-F5-RUT" firstAttribute="top" secondItem="RFu-It-rQB" secondAttribute="bottom" constant="44" id="f87-Xh-13c"/>
+                <constraint firstItem="X1Z-HX-re3" firstAttribute="leading" secondItem="Dum-Aa-ljR" secondAttribute="leading" id="go2-sN-Lbe"/>
+                <constraint firstItem="RFu-It-rQB" firstAttribute="leading" secondItem="Dum-Aa-ljR" secondAttribute="leading" id="oE4-ft-aie"/>
+                <constraint firstItem="X1Z-HX-re3" firstAttribute="trailing" secondItem="Dum-Aa-ljR" secondAttribute="trailing" id="ty5-Md-0ZB"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Dum-Aa-ljR" secondAttribute="trailing" constant="32" id="xfr-vc-W7L"/>
+                <constraint firstItem="RFu-It-rQB" firstAttribute="top" secondItem="X1Z-HX-re3" secondAttribute="bottom" constant="16" id="xwi-ZI-je4"/>
+                <constraint firstItem="Dum-Aa-ljR" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="32" id="yBY-2z-tSr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="139" y="94"/>
+        </view>
+    </objects>
+</document>

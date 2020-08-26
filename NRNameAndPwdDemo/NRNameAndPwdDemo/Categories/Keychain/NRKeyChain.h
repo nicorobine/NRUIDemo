@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param secClassValue 存储类型，这个方法支持NRSecClassValueInternetPassword和NRSecClassValueGenericPassword
  * @return 返回添加的状态
  */
-- (BOOL)addAccount:(NSString *)account password:(NSString *)password domain:(NSString * _Nullable)domain secClassValue:(NRSecClassValue)secClassValue;
+- (BOOL)addAccount:(NSString *)account password:(NSString * _Nullable)password domain:(NSString * _Nullable)domain secClassValue:(NRSecClassValue)secClassValue;
 
 /**
  * @brief 查询已经存储的项目
@@ -85,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param secClassValue 存储类型，这个方法支持NRSecClassValueInternetPassword和NRSecClassValueGenericPassword
  * @return 返回添加的状态
  */
-- (BOOL)addAccount:(NSString *)account password:(NSString *)password domain:(NSString * _Nullable)domain secClassValue:(NRSecClassValue)secClassValue context:(LAContext *)context;
+- (BOOL)addAccount:(NSString *)account password:(NSString * _Nullable)password domain:(NSString * _Nullable)domain secClassValue:(NRSecClassValue)secClassValue context:(LAContext *)context;
 
 @end
 

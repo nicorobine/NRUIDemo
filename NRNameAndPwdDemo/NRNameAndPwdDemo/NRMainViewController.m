@@ -11,6 +11,7 @@
 
 #import "NRLoginViewController.h"
 #import "NRBiometricLoginViewController.h"
+#import "NRAppleIDLoginViewController.h"
 
 @interface NRMainViewController ()
 
@@ -36,8 +37,14 @@
             case 0:
                 [weakSelf _toBiometricAuth:info];
                 break;
-            default:
+            case 1:
                 [weakSelf _toLogin:info];
+                break;
+            case 2:
+                [weakSelf nr_toAppleIDLogin:info];
+                break;
+            default:
+                
                 break;
         }
     };
@@ -55,10 +62,16 @@
     [self _showDefualt:loginVC info:info];
 }
 
+- (void)nr_toAppleIDLogin:(NRCellInfo *)info {
+    NRAppleIDLoginViewController* appleIdLogin = [[NRAppleIDLoginViewController alloc] init];
+    [self _showDefualt:appleIdLogin info:info];
+}
+
 - (void)_showDefualt:(UIViewController *)vc info:(NRCellInfo *)info {
     vc.title = info.title;
     [self.navigationController showViewController:vc sender:self];
 }
+
 
 #pragma mark - Table view data source
 
