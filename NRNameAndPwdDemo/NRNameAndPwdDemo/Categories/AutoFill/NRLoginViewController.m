@@ -12,6 +12,7 @@
 #import "NRTextInputViewController.h"
 #import "NRLoginModel.h"
 #import "NRKeyChain.h"
+#import <AuthenticationServices/AuthenticationServices.h>
 
 @interface NRLoginViewController () <UITextFieldDelegate>
 {
@@ -32,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self nr_initial];
-    
+    [self nr_setupCredentialStore];
 }
 
 #pragma mark - Private
@@ -43,6 +44,18 @@
         weakSelf.pwdField.passwordRules = [UITextInputPasswordRules passwordRulesWithDescriptor:passwordRules];
     };
     [self loginModel];
+}
+
+// 可能是开发者账号的问题，不支持存储账号
+- (void)nr_setupCredentialStore {
+    [[ASCredentialIdentityStore sharedStore] getCredentialIdentityStoreStateWithCompletion:^(ASCredentialIdentityStoreState * _Nonnull state) {
+        NSLog(@"credential identity store state: %@", state);
+    }];
+    ASCredentialServiceIdentifier* credentialServiceIdentifier = [[ASCredentialServiceIdentifier alloc] initWithIdentifier:@"com.nicorobine.wwt" type:ASCredentialServiceIdentifierTypeDomain];
+    ASPasswordCredentialIdentity* passwordCredentialIdentity = [[ASPasswordCredentialIdentity alloc] initWithServiceIdentifier:credentialServiceIdentifier user:@"nicorobine" recordIdentifier:@"nicorobine_identifier"];
+    [[ASCredentialIdentityStore sharedStore] saveCredentialIdentities:@[passwordCredentialIdentity] completion:^(BOOL success, NSError * _Nullable error) {
+        NSLog(@"success: %@ error: %@", @(success), error);
+    }];
 }
 
 #pragma mark - Actions

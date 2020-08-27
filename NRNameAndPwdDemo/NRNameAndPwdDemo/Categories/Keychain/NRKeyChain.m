@@ -72,6 +72,8 @@
         }
     }
     
+    CFRelease(attributes);
+    
     return result;
 }
 
@@ -87,6 +89,8 @@
     
     OSStatus status = SecItemUpdate(query, attributesToUpdate);
     
+    CFRelease(query);
+    
     return errSecSuccess == status;
 }
 
@@ -96,6 +100,8 @@
     CFDictionaryAddValue(query, kSecClass, [self nr_convertSecValue:secClassValue]);
     
     OSStatus status = SecItemDelete(query);
+    
+    CFRelease(query);
     
     return errSecSuccess == status;
 }
@@ -123,7 +129,11 @@
         CFDictionarySetValue(attributes, kSecAttrServer, (__bridge CFStringRef)domain);
     }
     
-    return SecItemAdd(attributes, nil) == errSecSuccess;
+    OSStatus status = SecItemAdd(attributes, nil);
+    
+    CFRelease(attributes);
+    
+    return  errSecSuccess == status;
 }
 
 #pragma mark - Private

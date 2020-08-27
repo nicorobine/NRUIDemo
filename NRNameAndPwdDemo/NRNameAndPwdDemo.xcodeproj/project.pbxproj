@@ -30,6 +30,10 @@
 		83296F8824F5F87C0082A6E4 /* NRAppleIDLoginResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83296F8624F5F87C0082A6E4 /* NRAppleIDLoginResultViewController.xib */; };
 		83296F8C24F635EB0082A6E4 /* NRAppleIDLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83296F8B24F635EB0082A6E4 /* NRAppleIDLoginHelper.m */; };
 		83918E6724EBA050004B36D3 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C966F524D4056000913065 /* LocalAuthentication.framework */; };
+		83BC8B5E24F7671C001E0701 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C966F324D4055600913065 /* AuthenticationServices.framework */; };
+		83BC8B6224F7671C001E0701 /* CredentialProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BC8B6124F7671C001E0701 /* CredentialProviderViewController.m */; };
+		83BC8B6524F7671C001E0701 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BC8B6324F7671C001E0701 /* MainInterface.storyboard */; };
+		83BC8B6A24F7671C001E0701 /* AutoFillCredentialProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 83BC8B5D24F7671C001E0701 /* AutoFillCredentialProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		83C966D824D404D000913065 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966D724D404D000913065 /* AppDelegate.m */; };
 		83C966DB24D404D000913065 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C966DA24D404D000913065 /* SceneDelegate.m */; };
 		83C966E124D404D000913065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C966DF24D404D000913065 /* Main.storyboard */; };
@@ -53,6 +57,13 @@
 			remoteGlobalIDString = 5225652B24F6A8440002DDB5;
 			remoteInfo = AuthenticationServices;
 		};
+		83BC8B6824F7671C001E0701 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83C966CB24D404D000913065 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83BC8B5C24F7671C001E0701;
+			remoteInfo = AutoFillCredentialProvider;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +73,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				83BC8B6A24F7671C001E0701 /* AutoFillCredentialProvider.appex in Embed App Extensions */,
 				5225653824F6A8440002DDB5 /* AuthenticationServices.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -104,6 +116,13 @@
 		83296F8624F5F87C0082A6E4 /* NRAppleIDLoginResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRAppleIDLoginResultViewController.xib; sourceTree = "<group>"; };
 		83296F8A24F635EB0082A6E4 /* NRAppleIDLoginHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRAppleIDLoginHelper.h; sourceTree = "<group>"; };
 		83296F8B24F635EB0082A6E4 /* NRAppleIDLoginHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRAppleIDLoginHelper.m; sourceTree = "<group>"; };
+		83BC8B5D24F7671C001E0701 /* AutoFillCredentialProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutoFillCredentialProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		83BC8B6024F7671C001E0701 /* CredentialProviderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CredentialProviderViewController.h; sourceTree = "<group>"; };
+		83BC8B6124F7671C001E0701 /* CredentialProviderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CredentialProviderViewController.m; sourceTree = "<group>"; };
+		83BC8B6424F7671C001E0701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		83BC8B6624F7671C001E0701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83BC8B6724F7671C001E0701 /* AutoFillCredentialProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoFillCredentialProvider.entitlements; sourceTree = "<group>"; };
+		83BC8B6E24F77AAD001E0701 /* AuthenticationServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuthenticationServices.entitlements; sourceTree = "<group>"; };
 		83C966D324D404D000913065 /* NRNameAndPwdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRNameAndPwdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C966D624D404D000913065 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83C966D724D404D000913065 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +156,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83BC8B5A24F7671C001E0701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BC8B5E24F7671C001E0701 /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83C966D024D404D000913065 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,6 +180,7 @@
 		5225652E24F6A8440002DDB5 /* AuthenticationServices */ = {
 			isa = PBXGroup;
 			children = (
+				83BC8B6E24F77AAD001E0701 /* AuthenticationServices.entitlements */,
 				5225652F24F6A8440002DDB5 /* AuthenticationViewController.h */,
 				5225653024F6A8440002DDB5 /* AuthenticationViewController.m */,
 				5225653224F6A8440002DDB5 /* AuthenticationViewController.xib */,
@@ -249,11 +277,24 @@
 			path = helper;
 			sourceTree = "<group>";
 		};
+		83BC8B5F24F7671C001E0701 /* AutoFillCredentialProvider */ = {
+			isa = PBXGroup;
+			children = (
+				83BC8B6024F7671C001E0701 /* CredentialProviderViewController.h */,
+				83BC8B6124F7671C001E0701 /* CredentialProviderViewController.m */,
+				83BC8B6324F7671C001E0701 /* MainInterface.storyboard */,
+				83BC8B6624F7671C001E0701 /* Info.plist */,
+				83BC8B6724F7671C001E0701 /* AutoFillCredentialProvider.entitlements */,
+			);
+			path = AutoFillCredentialProvider;
+			sourceTree = "<group>";
+		};
 		83C966CA24D404D000913065 = {
 			isa = PBXGroup;
 			children = (
 				83C966D524D404D000913065 /* NRNameAndPwdDemo */,
 				5225652E24F6A8440002DDB5 /* AuthenticationServices */,
+				83BC8B5F24F7671C001E0701 /* AutoFillCredentialProvider */,
 				83C966D424D404D000913065 /* Products */,
 				83C966F224D4055600913065 /* Frameworks */,
 			);
@@ -264,6 +305,7 @@
 			children = (
 				83C966D324D404D000913065 /* NRNameAndPwdDemo.app */,
 				5225652C24F6A8440002DDB5 /* AuthenticationServices.appex */,
+				83BC8B5D24F7671C001E0701 /* AutoFillCredentialProvider.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -344,6 +386,23 @@
 			productReference = 5225652C24F6A8440002DDB5 /* AuthenticationServices.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		83BC8B5C24F7671C001E0701 /* AutoFillCredentialProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83BC8B6D24F7671C001E0701 /* Build configuration list for PBXNativeTarget "AutoFillCredentialProvider" */;
+			buildPhases = (
+				83BC8B5924F7671C001E0701 /* Sources */,
+				83BC8B5A24F7671C001E0701 /* Frameworks */,
+				83BC8B5B24F7671C001E0701 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoFillCredentialProvider;
+			productName = AutoFillCredentialProvider;
+			productReference = 83BC8B5D24F7671C001E0701 /* AutoFillCredentialProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		83C966D224D404D000913065 /* NRNameAndPwdDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83C966EF24D404D500913065 /* Build configuration list for PBXNativeTarget "NRNameAndPwdDemo" */;
@@ -357,6 +416,7 @@
 			);
 			dependencies = (
 				5225653724F6A8440002DDB5 /* PBXTargetDependency */,
+				83BC8B6924F7671C001E0701 /* PBXTargetDependency */,
 			);
 			name = NRNameAndPwdDemo;
 			productName = NRNameAndPwdDemo;
@@ -374,6 +434,9 @@
 				TargetAttributes = {
 					5225652B24F6A8440002DDB5 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					83BC8B5C24F7671C001E0701 = {
+						CreatedOnToolsVersion = 11.5;
 					};
 					83C966D224D404D000913065 = {
 						CreatedOnToolsVersion = 11.5;
@@ -395,6 +458,7 @@
 			targets = (
 				83C966D224D404D000913065 /* NRNameAndPwdDemo */,
 				5225652B24F6A8440002DDB5 /* AuthenticationServices */,
+				83BC8B5C24F7671C001E0701 /* AutoFillCredentialProvider */,
 			);
 		};
 /* End PBXProject section */
@@ -405,6 +469,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5225653424F6A8440002DDB5 /* AuthenticationViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83BC8B5B24F7671C001E0701 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BC8B6524F7671C001E0701 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +506,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5225653124F6A8440002DDB5 /* AuthenticationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83BC8B5924F7671C001E0701 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BC8B6224F7671C001E0701 /* CredentialProviderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +550,11 @@
 			target = 5225652B24F6A8440002DDB5 /* AuthenticationServices */;
 			targetProxy = 5225653624F6A8440002DDB5 /* PBXContainerItemProxy */;
 		};
+		83BC8B6924F7671C001E0701 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83BC8B5C24F7671C001E0701 /* AutoFillCredentialProvider */;
+			targetProxy = 83BC8B6824F7671C001E0701 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -479,6 +564,14 @@
 				5225653324F6A8440002DDB5 /* Base */,
 			);
 			name = AuthenticationViewController.xib;
+			sourceTree = "<group>";
+		};
+		83BC8B6324F7671C001E0701 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83BC8B6424F7671C001E0701 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		83C966DF24D404D000913065 /* Main.storyboard */ = {
@@ -503,6 +596,7 @@
 		5225653A24F6A8440002DDB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AuthenticationServices/AuthenticationServices.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NEFN7ET24B;
 				INFOPLIST_FILE = AuthenticationServices/Info.plist;
@@ -522,6 +616,7 @@
 		5225653B24F6A8440002DDB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AuthenticationServices/AuthenticationServices.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NEFN7ET24B;
 				INFOPLIST_FILE = AuthenticationServices/Info.plist;
@@ -532,6 +627,44 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt.AuthenticationServices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83BC8B6B24F7671C001E0701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AutoFillCredentialProvider/AutoFillCredentialProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = AutoFillCredentialProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt.AutoFillCredentialProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83BC8B6C24F7671C001E0701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AutoFillCredentialProvider/AutoFillCredentialProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEFN7ET24B;
+				INFOPLIST_FILE = AutoFillCredentialProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicorobine.wwt.AutoFillCredentialProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -694,6 +827,15 @@
 			buildConfigurations = (
 				5225653A24F6A8440002DDB5 /* Debug */,
 				5225653B24F6A8440002DDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83BC8B6D24F7671C001E0701 /* Build configuration list for PBXNativeTarget "AutoFillCredentialProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83BC8B6B24F7671C001E0701 /* Debug */,
+				83BC8B6C24F7671C001E0701 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
