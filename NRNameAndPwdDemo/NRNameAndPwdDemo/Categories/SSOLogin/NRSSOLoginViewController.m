@@ -31,7 +31,7 @@
     if (path && path.length > 0) {
         NSURL* url = [NSURL URLWithString:path];
         ASAuthorizationSingleSignOnProvider* singleSignOnProvider = [ASAuthorizationSingleSignOnProvider authorizationProviderWithIdentityProviderURL:url];
-        if ([singleSignOnProvider canPerformAuthorization]) {
+//        if ([singleSignOnProvider canPerformAuthorization]) {
             ASAuthorizationSingleSignOnRequest* singleSignOnRequest = [singleSignOnProvider createRequest];
 //            singleSignOnRequest.authorizationOptions = @[[NSURLQueryItem queryItemWithName:@"client_id" value:@"test"]];
             singleSignOnRequest.requestedScopes = @[ASAuthorizationScopeEmail, ASAuthorizationScopeFullName];
@@ -39,11 +39,11 @@
             authorizationController.delegate = self;
             authorizationController.presentationContextProvider = self;
             [authorizationController performRequests];
-        } else {
-            UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Single Sign-On" message:[NSString stringWithFormat:@"can't authorization url: %@", url] preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
-            [self presentViewController:alertController animated:YES completion:nil];
-        }
+//        } else {
+//            UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Single Sign-On" message:[NSString stringWithFormat:@"can't authorization url: %@", url] preferredStyle:UIAlertControllerStyleAlert];
+//            [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+//            [self presentViewController:alertController animated:YES completion:nil];
+//        }
     }
 }
 
