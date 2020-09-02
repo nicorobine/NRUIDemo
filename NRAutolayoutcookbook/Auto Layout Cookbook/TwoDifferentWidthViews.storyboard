@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hCC-91-arT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="9bo-0d-p4v">
+            <objects>
+                <viewController id="hCC-91-arT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S9l-gA-fB5"/>
+                        <viewControllerLayoutGuide type="bottom" id="d4a-49-yb5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oSr-pD-hYf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzz-kX-nZ4" userLabel="Purple View">
+                                <rect key="frame" x="20" y="64" width="122" height="778"/>
+                                <color key="backgroundColor" red="0.57254901960000004" green="0.1529411765" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYK-jC-A2h" userLabel="Orange View">
+                                <rect key="frame" x="150" y="64" width="244" height="778"/>
+                                <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gzz-kX-nZ4" firstAttribute="leading" secondItem="oSr-pD-hYf" secondAttribute="leadingMargin" id="2o6-Kp-Lh0"/>
+                            <constraint firstItem="d4a-49-yb5" firstAttribute="top" secondItem="gzz-kX-nZ4" secondAttribute="bottom" constant="20" id="J9N-gC-1RJ"/>
+                            <constraint firstItem="dYK-jC-A2h" firstAttribute="leading" secondItem="gzz-kX-nZ4" secondAttribute="trailing" constant="8" symbolic="YES" id="LZP-OR-mSe"/>
+                            <constraint firstItem="d4a-49-yb5" firstAttribute="top" secondItem="dYK-jC-A2h" secondAttribute="bottom" constant="20" id="WI7-dy-s0f"/>
+                            <constraint firstItem="gzz-kX-nZ4" firstAttribute="top" secondItem="S9l-gA-fB5" secondAttribute="bottom" constant="20" id="anY-hg-Vod"/>
+                            <constraint firstItem="dYK-jC-A2h" firstAttribute="trailing" secondItem="oSr-pD-hYf" secondAttribute="trailingMargin" id="ch8-Mk-MGP"/>
+                            <constraint firstItem="dYK-jC-A2h" firstAttribute="width" secondItem="gzz-kX-nZ4" secondAttribute="width" multiplier="2" id="eTs-At-Hhp"/>
+                            <constraint firstItem="dYK-jC-A2h" firstAttribute="top" secondItem="S9l-gA-fB5" secondAttribute="bottom" constant="20" id="qNq-U9-85H"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Re4-32-EG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337" y="227"/>
+        </scene>
+    </scenes>
+</document>
