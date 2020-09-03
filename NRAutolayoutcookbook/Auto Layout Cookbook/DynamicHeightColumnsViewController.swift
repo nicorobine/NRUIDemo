@@ -22,7 +22,7 @@ class DynamicHeightColumnsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector(("changeFontSizeTimerDidFire:")), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.changeFontSizeTimerDidFire(timer:)), userInfo: nil, repeats: true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -33,7 +33,7 @@ class DynamicHeightColumnsViewController: UIViewController {
     }
     
     // MARK: Timer
-    
+    @objc
     func changeFontSizeTimerDidFire(timer: Timer) {
         // Toggle the font preference.
         usingLargeFont = !usingLargeFont

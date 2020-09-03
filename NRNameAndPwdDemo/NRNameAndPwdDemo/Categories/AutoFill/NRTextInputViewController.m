@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.textField setText:self.initialText];
+    
     [self.textField becomeFirstResponder];
 }
 
