@@ -44,6 +44,7 @@ class DynamicStackViewController: UIViewController {
         }
     }
     
+    @objc
     func deleteStackView(sender: UIButton) {
         guard let entryView = sender.superview else { return }
         
@@ -79,7 +80,7 @@ class DynamicStackViewController: UIViewController {
         
         let deleteButton = UIButton(type: .roundedRect)
         deleteButton.setTitle("Delete", for: .normal)
-        deleteButton.addTarget(self, action: Selector(("deleteStackView:")), for: .touchUpInside)
+        deleteButton.addTarget(self, action: #selector(self.deleteStackView(sender:)), for: .touchUpInside)
         
         stack.addArrangedSubview(dateLabel)
         stack.addArrangedSubview(numberLabel)

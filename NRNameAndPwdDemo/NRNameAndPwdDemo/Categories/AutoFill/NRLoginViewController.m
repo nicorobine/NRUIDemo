@@ -34,6 +34,7 @@
     [super viewDidLoad];
     [self nr_initial];
     [self nr_setupCredentialStore];
+    [self nr_saveWebCredential];
 }
 
 #pragma mark - Private
@@ -56,6 +57,64 @@
     [[ASCredentialIdentityStore sharedStore] saveCredentialIdentities:@[passwordCredentialIdentity] completion:^(BOOL success, NSError * _Nullable error) {
         NSLog(@"success: %@ error: %@", @(success), error);
     }];
+}
+
+// 储存Web共享凭据
+- (void)nr_saveWebCredential {
+    SecAddSharedWebCredential(CFStringCreateWithCString(NULL, "nicorobine.github.io", kCFStringEncodingUTF8), CFStringCreateWithCString(nil, "nicorobine", kCFStringEncodingUTF8), CFStringCreateWithCString(nil, "123456", kCFStringEncodingUTF8), ^(CFErrorRef  _Nullable error) {
+        if (error) {
+            NSLog(@"%@", (__bridge NSError *)error);
+        } else {
+            NSLog(@"Save Web Credential success");
+        }
+    });
+}
+
+// 获取Web共享凭据
+- (NSString *)nr_getWebCredential {
+    NSMutableString *result = [NSMutableString stringWithCapacity:0];
+    SecRequestSharedWebCredential(NULL, NULL, ^(CFArrayRef  _Nullable credentials, CFErrorRef  _Nullable error) {
+        if (error) {
+            NSLog(@"%@", (__bridge NSError *)error);
+        } else {
+            BOOL success = NO;
+            CFStringRef server = NULL;
+            CFStringRef userName = NULL;
+            CFStringRef password = NULL;
+            
+            if (CFArrayGetCount(credentials) > 0) {
+                CFDictionaryRef credentialDict = CFArrayGetValueAtIndex(credentials, 0);
+                server = CFDictionaryGetValue(credentialDict, kSecAttrServer);
+                userName = CFDictionaryGetValue(credentialDict, kSecAttrAccount);
+                password = CFDictionaryGetValue(credentialDict, kSecSharedPassword);
+                
+                if (server) {
+                    [result appendString:@"域名："];
+                    [result appendString:(__bridge NSString *)server];
+                }
+                
+                if (userName) {
+                    [result appendString:@" 用户名："];
+                    [result appendString:(__bridge NSString *)userName];
+                }
+                
+                if (password) {
+                    [result appendString:@" 密码："];
+                    [result appendString:(__bridge NSString *)password];
+                }
+                
+                // 接下来执行登录
+                success = YES;
+                
+                if (success) {
+                    // 将凭据保存到钥匙串
+                } else {
+                    // 提示用户输入账号密码
+                }
+            }
+        }
+    });
+    return result;
 }
 
 #pragma mark - Actions
@@ -91,6 +150,7 @@
 
 - (IBAction)getCode:(id)sender {
     NRTextInputViewController* textInputVC = [[NRTextInputViewController alloc] init];
+    textInputVC.initialText = [self nr_getWebCredential];
     [self.navigationController presentViewController:textInputVC animated:YES completion:nil];
 }
 
