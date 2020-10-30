@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kGu-Dm-mAW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--程序生命周期-->
+        <scene sceneID="6ax-Ni-gfn">
+            <objects>
+                <tableViewController storyboardIdentifier="com.nicorobine.mainViewController" title="程序生命周期" useStoryboardIdentifierAsRestorationIdentifier="YES" id="acB-65-Nak" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hwp-Me-IaH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="KbW-1R-kNA">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="MEG-06-wI2" style="IBUITableViewCellStyleDefault" id="IML-b3-VDq">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IML-b3-VDq" id="dFw-pU-KwV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="场景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MEG-06-wI2">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="QvA-Wm-Xz4" kind="show" id="AJr-VA-g3q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Cnz-Bg-M3G" style="IBUITableViewCellStyleDefault" id="8as-eK-1Rw">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8as-eK-1Rw" id="zZs-jn-wuq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="场景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cnz-Bg-M3G">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="acB-65-Nak" id="RkM-aa-cU4"/>
+                            <outlet property="delegate" destination="acB-65-Nak" id="bR3-zI-N02"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="nxt-7V-P3G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L79-ju-Agu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="-119"/>
+        </scene>
+        <!--场景-->
+        <scene sceneID="KE7-vM-ddo">
+            <objects>
+                <viewController storyboardIdentifier="com.nicorobine.scene.main" title="场景" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QvA-Wm-Xz4" customClass="NRSceneTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Osr-Td-vj2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="siK-v0-1ZE">
+                                <rect key="frame" x="130.5" y="114" width="153" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHM-ev-tFA">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="30"/>
+                                        <state key="normal" title="创建并切换到指定场景"/>
+                                        <connections>
+                                            <action selector="nr_createNewScene:" destination="QvA-Wm-Xz4" eventType="touchUpInside" id="6t5-1L-70D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieN-sp-pEl">
+                                        <rect key="frame" x="30.5" y="38" width="92" height="30"/>
+                                        <state key="normal" title="切换到场景一"/>
+                                        <connections>
+                                            <action selector="nr_switchSeneOne:" destination="QvA-Wm-Xz4" eventType="touchUpInside" id="2dR-NF-Z3b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="siK-v0-1ZE" firstAttribute="top" secondItem="3bh-VR-cBI" secondAttribute="top" constant="26" id="rjr-vY-MMR"/>
+                            <constraint firstItem="siK-v0-1ZE" firstAttribute="centerX" secondItem="Osr-Td-vj2" secondAttribute="centerX" id="xUq-zw-lb5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3bh-VR-cBI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Srq-Bm-5RV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3J-js-OU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="-119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5lY-bD-pn1">
+            <objects>
+                <navigationController storyboardIdentifier="com.nicorobine.mainNaviViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kGu-Dm-mAW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICC-vI-4Ca">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="acB-65-Nak" kind="relationship" relationship="rootViewController" id="H97-CY-GHR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TIN-bm-WI5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-803" y="-119"/>
+        </scene>
+    </scenes>
+</document>

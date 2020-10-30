@@ -16,6 +16,9 @@
 		830C2D152542E106001F2EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830C2D132542E106001F2EB0 /* LaunchScreen.storyboard */; };
 		830C2D182542E106001F2EB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 830C2D172542E106001F2EB0 /* main.m */; };
 		830C2D202542E38A001F2EB0 /* NRApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 830C2D1F2542E38A001F2EB0 /* NRApplication.m */; };
+		830C2D3D254940FD001F2EB0 /* NRSceneTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830C2D3C254940FD001F2EB0 /* NRSceneTestViewController.m */; };
+		830C2D41254946A9001F2EB0 /* NRTestOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830C2D40254946A9001F2EB0 /* NRTestOne.storyboard */; };
+		830C2D4425494753001F2EB0 /* NRSceneOneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 830C2D4325494753001F2EB0 /* NRSceneOneDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,11 @@
 		830C2D172542E106001F2EB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		830C2D1E2542E38A001F2EB0 /* NRApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRApplication.h; sourceTree = "<group>"; };
 		830C2D1F2542E38A001F2EB0 /* NRApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRApplication.m; sourceTree = "<group>"; };
+		830C2D3B254940FD001F2EB0 /* NRSceneTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRSceneTestViewController.h; sourceTree = "<group>"; };
+		830C2D3C254940FD001F2EB0 /* NRSceneTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRSceneTestViewController.m; sourceTree = "<group>"; };
+		830C2D40254946A9001F2EB0 /* NRTestOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NRTestOne.storyboard; sourceTree = "<group>"; };
+		830C2D4225494753001F2EB0 /* NRSceneOneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRSceneOneDelegate.h; sourceTree = "<group>"; };
+		830C2D4325494753001F2EB0 /* NRSceneOneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRSceneOneDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,22 +74,51 @@
 		830C2D012542E101001F2EB0 /* WLAppLifeCycleDemo */ = {
 			isa = PBXGroup;
 			children = (
-				830C2D1E2542E38A001F2EB0 /* NRApplication.h */,
-				830C2D1F2542E38A001F2EB0 /* NRApplication.m */,
+				830C2D3F25494673001F2EB0 /* Storyboards */,
+				830C2D3E254942EE001F2EB0 /* SceneDelegates */,
+				830C2D3A254940D1001F2EB0 /* ViewControllers */,
 				830C2D022542E101001F2EB0 /* AppDelegate.h */,
 				830C2D032542E101001F2EB0 /* AppDelegate.m */,
-				830C2D052542E101001F2EB0 /* SceneDelegate.h */,
-				830C2D082542E101001F2EB0 /* ViewController.h */,
-				830C2D062542E101001F2EB0 /* SceneDelegate.m */,
-				830C2D092542E101001F2EB0 /* ViewController.m */,
-				830C2D0B2542E101001F2EB0 /* Main.storyboard */,
 				830C2D112542E106001F2EB0 /* Assets.xcassets */,
-				830C2D132542E106001F2EB0 /* LaunchScreen.storyboard */,
 				830C2D162542E106001F2EB0 /* Info.plist */,
+				830C2D132542E106001F2EB0 /* LaunchScreen.storyboard */,
 				830C2D172542E106001F2EB0 /* main.m */,
+				830C2D1E2542E38A001F2EB0 /* NRApplication.h */,
+				830C2D1F2542E38A001F2EB0 /* NRApplication.m */,
 				830C2D0E2542E101001F2EB0 /* WLAppLifeCycleDemo.xcdatamodeld */,
 			);
 			path = WLAppLifeCycleDemo;
+			sourceTree = "<group>";
+		};
+		830C2D3A254940D1001F2EB0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				830C2D082542E101001F2EB0 /* ViewController.h */,
+				830C2D092542E101001F2EB0 /* ViewController.m */,
+				830C2D3B254940FD001F2EB0 /* NRSceneTestViewController.h */,
+				830C2D3C254940FD001F2EB0 /* NRSceneTestViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		830C2D3E254942EE001F2EB0 /* SceneDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				830C2D052542E101001F2EB0 /* SceneDelegate.h */,
+				830C2D062542E101001F2EB0 /* SceneDelegate.m */,
+				830C2D4225494753001F2EB0 /* NRSceneOneDelegate.h */,
+				830C2D4325494753001F2EB0 /* NRSceneOneDelegate.m */,
+			);
+			path = SceneDelegates;
+			sourceTree = "<group>";
+		};
+		830C2D3F25494673001F2EB0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				830C2D0B2542E101001F2EB0 /* Main.storyboard */,
+				830C2D40254946A9001F2EB0 /* NRTestOne.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				830C2D152542E106001F2EB0 /* LaunchScreen.storyboard in Resources */,
+				830C2D41254946A9001F2EB0 /* NRTestOne.storyboard in Resources */,
 				830C2D122542E106001F2EB0 /* Assets.xcassets in Resources */,
 				830C2D0D2542E101001F2EB0 /* Main.storyboard in Resources */,
 			);
@@ -155,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				830C2D202542E38A001F2EB0 /* NRApplication.m in Sources */,
+				830C2D3D254940FD001F2EB0 /* NRSceneTestViewController.m in Sources */,
+				830C2D4425494753001F2EB0 /* NRSceneOneDelegate.m in Sources */,
 				830C2D182542E106001F2EB0 /* main.m in Sources */,
 				830C2D102542E101001F2EB0 /* WLAppLifeCycleDemo.xcdatamodeld in Sources */,
 				830C2D0A2542E101001F2EB0 /* ViewController.m in Sources */,
