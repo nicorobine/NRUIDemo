@@ -2,12 +2,17 @@
 //  NRFilteringAndSortingTests.m
 //  NRFilteringAndSortingTests
 //
+//  谓词参考
+//  https://app.yinxiang.com/shard/s13/nl/18422317/528217e2-a6fc-4359-83dc-f6e6e6d94d14/
+//  排序参考
+//  https://app.yinxiang.com/shard/s13/nl/18422317/2151c0c3-a5d8-4808-9312-c5b6c4bbd999/
 //  Created by NicoRobine on 2020/11/2.
 //  Copyright © 2020 Nicorobine. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 #import "NRProductModel.h"
+#import "NRPerson.h"
 
 @interface NSNumber (Factorial)
 - (NSNumber *)factorial;
@@ -44,6 +49,8 @@
         // Put the code you want to measure the time of here.
     }];
 }
+
+#pragma mark - 谓词
 
 // 字符串比较
 - (void)testPredicateWithStringFormat {
@@ -648,6 +655,64 @@
 //    NSExpression* funcExpression_2 = [NSExpression expressionForFunction:arrayExpression selectorName:@"objectAtIndex:" arguments:@[@0]];
 //    value = [funcExpression_2 expressionValueWithObject:nil context:nil];
 //    NSLog(@"funcExpression_1 %@", value);
+}
+
+#pragma mark - 排序
+
+// 测试排序
+- (void)testSort {
+    NSArray* array_1 = @[@10, @90, @40, @80, @100, @60, @20];
+    
+    NSSortDescriptor* ascending = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES];
+    NSArray* ascendingArray = [array_1 sortedArrayUsingDescriptors:@[ascending]];
+    NSLog(@"ascendingArray: %@", ascendingArray);
+    
+    NSSortDescriptor* descending = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO];
+    NSArray* descendingArray = [array_1 sortedArrayUsingDescriptors:@[descending]];
+    NSLog(@"descendingArray: %@", descendingArray);
+    
+    NSArray<NRPerson *>* persons = @[
+        [NRPerson entityWithFirstName:@"Jodan" lastName:@"Macal"],
+        [NRPerson entityWithFirstName:@"Jufer" lastName:@"Madal"],
+        [NRPerson entityWithFirstName:@"Jodan" lastName:@"Locus"],
+        [NRPerson entityWithFirstName:@"Japan" lastName:@"Mcdel"],
+        [NRPerson entityWithFirstName:@"Susan" lastName:@"Luna"]];
+    
+    NSSortDescriptor* personDescriptor_1 = [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES];
+    NSSortDescriptor* personDescriptor_2 = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+    NSArray* sortedPerson_1 = [persons sortedArrayUsingDescriptors:@[personDescriptor_1, personDescriptor_2]];
+    NSLog(@"sortedPerson_1: %@", sortedPerson_1);
+}
+
+// 测试使用方法选择器排序
+- (void)testSortWithSelector {
+    NSArray<NRPerson *>* persons = @[
+    [NRPerson entityWithFirstName:@"Jodan" lastName:@"Macal"],
+    [NRPerson entityWithFirstName:@"jbfer" lastName:@"Madal"],
+    [NRPerson entityWithFirstName:@"Jodan" lastName:@"Locus"],
+    [NRPerson entityWithFirstName:@"Japan" lastName:@"Mcdel"],
+    [NRPerson entityWithFirstName:@"Susan" lastName:@"Luna"]];
+
+    
+    NSSortDescriptor* sortDecriptor = [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+    
+    NSArray* sortedArray = [persons sortedArrayUsingDescriptors:@[sortDecriptor]];
+    NSLog(@"sortedArray: %@", sortedArray);
+}
+
+- (void)testSortWithBlock {
+    NSArray<NRPerson *>* persons = @[
+    [NRPerson entityWithFirstName:@"Jodan" lastName:@"Macal"],
+    [NRPerson entityWithFirstName:@"jbfer" lastName:@"Madal"],
+    [NRPerson entityWithFirstName:@"Jodan" lastName:@"Locus"],
+    [NRPerson entityWithFirstName:@"Japan" lastName:@"Mcdel"],
+    [NRPerson entityWithFirstName:@"Susan" lastName:@"Luna"]];
+    
+    NSSortDescriptor* blokDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES comparator:^NSComparisonResult(NSString*  _Nonnull obj1, NSString*  _Nonnull obj2) {
+        return [obj1.uppercaseString compare:obj2.uppercaseString];
+    }];
+    NSArray* sortedArray = [persons sortedArrayUsingDescriptors:@[blokDescriptor]];
+    NSLog(@"sortedArray: %@", sortedArray);
 }
 
 @end

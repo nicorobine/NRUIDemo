@@ -21,6 +21,15 @@
 		83E01E19254FADA4005952ED /* NRProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E14254FAAD8005952ED /* NRProductModel.m */; };
 		83E01E1C25525EED005952ED /* NRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E1B25525EED005952ED /* NRPerson.m */; };
 		83E01E1D25525F59005952ED /* NRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E1B25525EED005952ED /* NRPerson.m */; };
+		83E01E2325539BB1005952ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83E01E2525539BB1005952ED /* InfoPlist.strings */; };
+		83E01E2925539CAC005952ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83E01E2B25539CAC005952ED /* Localizable.strings */; };
+		83E01E2D2553A3F7005952ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83E01E2525539BB1005952ED /* InfoPlist.strings */; };
+		83E01E2E2553A3FB005952ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83E01E2B25539CAC005952ED /* Localizable.strings */; };
+		83E01E312553A784005952ED /* NRProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E302553A784005952ED /* NRProduct.m */; };
+		83E01E342553C46C005952ED /* NRSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E332553C46C005952ED /* NRSearchResultViewController.m */; };
+		83E01E372553C63E005952ED /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E01E362553C63E005952ED /* TableCell.xib */; };
+		83E01E3A2553CA3A005952ED /* NRFilteringViewController+DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E392553CA3A005952ED /* NRFilteringViewController+DataSource.m */; };
+		83E01E3D2553EA29005952ED /* NRFilteringViewController+Updating.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E3C2553EA29005952ED /* NRFilteringViewController+Updating.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +65,21 @@
 		83E01E14254FAAD8005952ED /* NRProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRProductModel.m; sourceTree = "<group>"; };
 		83E01E1A25525EED005952ED /* NRPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRPerson.h; sourceTree = "<group>"; };
 		83E01E1B25525EED005952ED /* NRPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRPerson.m; sourceTree = "<group>"; };
+		83E01E1E25539AC7005952ED /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		83E01E1F25539AC7005952ED /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		83E01E2425539BB1005952ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83E01E2625539BB3005952ED /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		83E01E2A25539CAC005952ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		83E01E2C25539CAD005952ED /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		83E01E2F2553A784005952ED /* NRProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRProduct.h; sourceTree = "<group>"; };
+		83E01E302553A784005952ED /* NRProduct.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRProduct.m; sourceTree = "<group>"; };
+		83E01E322553C46C005952ED /* NRSearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRSearchResultViewController.h; sourceTree = "<group>"; };
+		83E01E332553C46C005952ED /* NRSearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRSearchResultViewController.m; sourceTree = "<group>"; };
+		83E01E362553C63E005952ED /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		83E01E382553CA3A005952ED /* NRFilteringViewController+DataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRFilteringViewController+DataSource.h"; sourceTree = "<group>"; };
+		83E01E392553CA3A005952ED /* NRFilteringViewController+DataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRFilteringViewController+DataSource.m"; sourceTree = "<group>"; };
+		83E01E3B2553EA29005952ED /* NRFilteringViewController+Updating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRFilteringViewController+Updating.h"; sourceTree = "<group>"; };
+		83E01E3C2553EA29005952ED /* NRFilteringViewController+Updating.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRFilteringViewController+Updating.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +121,8 @@
 		83E01DE3254FA84D005952ED /* NRFilteringAndSorting */ = {
 			isa = PBXGroup;
 			children = (
+				83E01E352553C622005952ED /* xib */,
+				83E01E2025539B18005952ED /* LocalizableFile */,
 				83E01E12254FAA76005952ED /* Models */,
 				83E01E0E254FA98F005952ED /* ViewControllers */,
 				83E01DE4254FA84D005952ED /* AppDelegate.h */,
@@ -129,6 +155,12 @@
 			children = (
 				83E01E0F254FA9BF005952ED /* NRFilteringViewController.h */,
 				83E01E10254FA9BF005952ED /* NRFilteringViewController.m */,
+				83E01E382553CA3A005952ED /* NRFilteringViewController+DataSource.h */,
+				83E01E392553CA3A005952ED /* NRFilteringViewController+DataSource.m */,
+				83E01E322553C46C005952ED /* NRSearchResultViewController.h */,
+				83E01E332553C46C005952ED /* NRSearchResultViewController.m */,
+				83E01E3B2553EA29005952ED /* NRFilteringViewController+Updating.h */,
+				83E01E3C2553EA29005952ED /* NRFilteringViewController+Updating.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -140,8 +172,27 @@
 				83E01E14254FAAD8005952ED /* NRProductModel.m */,
 				83E01E1A25525EED005952ED /* NRPerson.h */,
 				83E01E1B25525EED005952ED /* NRPerson.m */,
+				83E01E2F2553A784005952ED /* NRProduct.h */,
+				83E01E302553A784005952ED /* NRProduct.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		83E01E2025539B18005952ED /* LocalizableFile */ = {
+			isa = PBXGroup;
+			children = (
+				83E01E2525539BB1005952ED /* InfoPlist.strings */,
+				83E01E2B25539CAC005952ED /* Localizable.strings */,
+			);
+			path = LocalizableFile;
+			sourceTree = "<group>";
+		};
+		83E01E352553C622005952ED /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				83E01E362553C63E005952ED /* TableCell.xib */,
+			);
+			path = xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +258,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 83E01DD8254FA84D005952ED;
 			productRefGroup = 83E01DE2254FA84D005952ED /* Products */;
@@ -224,8 +276,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E01E2925539CAC005952ED /* Localizable.strings in Resources */,
 				83E01DF7254FA84F005952ED /* LaunchScreen.storyboard in Resources */,
+				83E01E2325539BB1005952ED /* InfoPlist.strings in Resources */,
 				83E01DF4254FA84F005952ED /* Assets.xcassets in Resources */,
+				83E01E372553C63E005952ED /* TableCell.xib in Resources */,
 				83E01DEF254FA84D005952ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +289,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E01E2D2553A3F7005952ED /* InfoPlist.strings in Resources */,
+				83E01E2E2553A3FB005952ED /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,12 +302,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E01DFA254FA84F005952ED /* main.m in Sources */,
+				83E01E3D2553EA29005952ED /* NRFilteringViewController+Updating.m in Sources */,
+				83E01E342553C46C005952ED /* NRSearchResultViewController.m in Sources */,
 				83E01E18254FADA3005952ED /* NRProductModel.m in Sources */,
 				83E01E11254FA9BF005952ED /* NRFilteringViewController.m in Sources */,
+				83E01E312553A784005952ED /* NRProduct.m in Sources */,
 				83E01DEC254FA84D005952ED /* ViewController.m in Sources */,
 				83E01E1C25525EED005952ED /* NRPerson.m in Sources */,
 				83E01DE6254FA84D005952ED /* AppDelegate.m in Sources */,
 				83E01DE9254FA84D005952ED /* SceneDelegate.m in Sources */,
+				83E01E3A2553CA3A005952ED /* NRFilteringViewController+DataSource.m in Sources */,
 				83E01DF2254FA84D005952ED /* NRFilteringAndSorting.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +341,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				83E01DEE254FA84D005952ED /* Base */,
+				83E01E1E25539AC7005952ED /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -288,8 +350,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				83E01DF6254FA84F005952ED /* Base */,
+				83E01E1F25539AC7005952ED /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		83E01E2525539BB1005952ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83E01E2425539BB1005952ED /* en */,
+				83E01E2625539BB3005952ED /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		83E01E2B25539CAC005952ED /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83E01E2A25539CAC005952ED /* en */,
+				83E01E2C25539CAD005952ED /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -299,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -357,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

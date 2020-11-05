@@ -17,4 +17,12 @@
     return person;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"firstName: %@, lastName:%@", _firstName, _lastName];
+}
+
+- (NSString *)debugDescription {
+    return [NSString stringWithFormat:@"firstName: %@, lastName:%@", _firstName, _lastName];
+}
+
 @end

@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  NRFilteringAndSorting
+
+  Created by NicoRobine on 2020/11/5.
+  Copyright © 2020 Nicorobine. All rights reserved.
+*/
+
+"zhangsan" = "Zhang San";
+"lisi" = "Li Si";
+"wangwu" = "Wang Wu";
+"zhangling" = "Zhang Ling";
+"liqing" = "Li Qing";
+"wangjiang" = "Wang Jiang";

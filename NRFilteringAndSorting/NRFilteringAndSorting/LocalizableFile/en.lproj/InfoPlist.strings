@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  NRFilteringAndSorting
+
+  Created by NicoRobine on 2020/11/5.
+  Copyright © 2020 Nicorobine. All rights reserved.
+*/
+
+CFBundleDisplayName = "Filtering And Sorting";
+

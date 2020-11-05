@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "对集合排序"; ObjectID = "9qe-p4-XyV"; */
+"9qe-p4-XyV.text" = "对集合排序";
+
+/* Class = "UILabel"; text = "Filtering"; ObjectID = "D0Q-3T-URK"; */
+"D0Q-3T-URK.text" = "Filtering";
+
+/* Class = "UITableViewController"; title = "NSPredicate"; ObjectID = "D0d-cr-KPP"; */
+"D0d-cr-KPP.title" = "NSPredicate";
+
+/* Class = "UINavigationItem"; title = "谓词"; ObjectID = "Y6f-fJ-OkT"; */
+"Y6f-fJ-OkT.title" = "谓词";
+
+/* Class = "UILabel"; text = "参见单元测试"; ObjectID = "cCP-eb-Mfd"; */
+"cCP-eb-Mfd.text" = "参见单元测试";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "hMB-XJ-TLf"; */
+"hMB-XJ-TLf.text" = "Title";
+
+/* Class = "UILabel"; text = "Sorting"; ObjectID = "mD4-li-0aX"; */
+"mD4-li-0aX.text" = "Sorting";
+
+/* Class = "UILabel"; text = "可以使用谓词过滤数组、集合、字典和字符串数据"; ObjectID = "s7r-Q2-EyZ"; */
+"s7r-Q2-EyZ.text" = "可以使用谓词过滤数组、集合、字典和字符串数据";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "uFw-cy-Xxo"; */
+"uFw-cy-Xxo.title" = "Root View Controller";
