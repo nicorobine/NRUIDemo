@@ -40,6 +40,14 @@
     
     NSLog(@"%s%d%s", __FILE_NAME__, __LINE__, __FUNCTION__);
     
+    if (options.shortcutItem) {
+        UISceneConfiguration* shortCutConfiguration = [[UISceneConfiguration alloc] initWithName:nil sessionRole:connectingSceneSession.role];
+        shortCutConfiguration.sceneClass = [UIWindowScene class];
+        shortCutConfiguration.delegateClass = NSClassFromString(@"NRShortCutScceneDelegate");
+        return shortCutConfiguration;
+    }
+    
+    
     if (options.userActivities.count > 0) {
         return [[UISceneConfiguration alloc] initWithName:@"One Configuration" sessionRole:connectingSceneSession.role];
     }
@@ -292,6 +300,7 @@
 
 // 用户为应用选择主屏幕快速操作时调用，除非启动方法中拦截了交互
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    [[UIApplication sharedApplication] requestSceneSessionActivation:nil userActivity:nil options:nil errorHandler:nil];
     NSLog(@"%s%d%s", __FILE_NAME__, __LINE__, __FUNCTION__);
 }
 

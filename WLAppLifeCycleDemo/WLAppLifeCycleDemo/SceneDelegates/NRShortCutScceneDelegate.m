@@ -1,19 +1,16 @@
 //
-//  SceneDelegate.m
+//  NRShortCutScceneDelegate.m
 //  WLAppLifeCycleDemo
 //
-//  Created by NicoRobine on 2020/10/23.
+//  Created by NicoRobine on 2020/11/6.
 //  Copyright © 2020 Nicorobine. All rights reserved.
 //
 
-#import "SceneDelegate.h"
+#import "NRShortCutScceneDelegate.h"
 #import "AppDelegate.h"
+#import "NRShorCutViewController.h"
 
-@interface SceneDelegate ()
-
-@end
-
-@implementation SceneDelegate
+@implementation NRShortCutScceneDelegate
 
 #pragma - 场景大小、方向和特征改变的回调
 
@@ -24,9 +21,6 @@
 // 响应用户的快捷操作
 - (void)windowScene:(UIWindowScene *)windowScene performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
     NSLog(@"%s%d%s\nScene:%@\nShortcutItem:%@", __FILE_NAME__, __LINE__, __FUNCTION__, windowScene, shortcutItem);
-    [[UIApplication sharedApplication] requestSceneSessionActivation:nil userActivity:nil options:nil errorHandler:^(NSError * _Nonnull error) {
-        NSLog(@"%s%s error:%@", __FILE_NAME__, __FUNCTION__, error);
-    }];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         completionHandler(YES);
     });
@@ -41,7 +35,19 @@
 
 // 场景将要添加到应用程序
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+    
+    self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
+    self.window.rootViewController = [[NRShorCutViewController alloc] initWithNibName:NSStringFromClass([NRShorCutViewController class]) bundle:nil];
+    
+    
+    UISceneActivationConditions* activationConditions = [[UISceneActivationConditions alloc] init];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF BEGINWITH %@", @"com.nicorobine.shortcut"];
+    activationConditions.canActivateForTargetContentIdentifierPredicate = [NSPredicate predicateWithValue:@NO];
+    activationConditions.prefersToActivateForTargetContentIdentifierPredicate = predicate;
+    scene.activationConditions = activationConditions;
     NSLog(@"%s%d%s\nScene:%@\nSession:%@\nConnectionOptions:%@", __FILE_NAME__, __LINE__, __FUNCTION__, scene, session, connectionOptions);
+    
+    [self.window makeKeyAndVisible];
 }
 
 // UIKit移除了应用程序的场景

@@ -73,28 +73,32 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>UIApplicationShortcutItems</key>
-    <array>
-        <dict>
-            <key>UIApplicationShortcutItemType</key>
-            <string>SearchAction</string>
-            <key>UIApplicationShortcutItemIconType</key>
-            <string>UIApplicationShortcutIconTypeSearch</string>
-            <key>UIApplicationShortcutItemTitle</key>
-            <string>Search</string>
-            <key>UIApplicationShortcutItemSubtitle</key>
-            <string>Search for an item</string>
-        </dict>
-        <dict>
-            <key>UIApplicationShortcutItemType</key>
-            <string>ShareAction</string>
-            <key>UIApplicationShortcutItemIconType</key>
-            <string>UIApplicationShortcutIconTypeShare</string>
-            <key>UIApplicationShortcutItemTitle</key>
-            <string>Share</string>
-            <key>UIApplicationShortcutItemSubtitle</key>
-            <string>Share an item</string>
-        </dict>
-    </array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>SearchAction</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeSearch</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Search</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Search for an item</string>
+			<key>UIApplicationShortcut​ItemTargetContentIdentifier</key>
+			<string>com.nicorobine.shortcut</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>ShareAction</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeShare</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Share</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Share an item</string>
+			<key>UIApplicationShortcut​ItemTargetContentIdentifier</key>
+			<string>com.nicorobine.shortcut</string>
+		</dict>
+	</array>
 </dict>
 </plist>

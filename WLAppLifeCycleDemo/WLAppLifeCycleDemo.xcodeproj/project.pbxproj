@@ -19,6 +19,9 @@
 		830C2D3D254940FD001F2EB0 /* NRSceneTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830C2D3C254940FD001F2EB0 /* NRSceneTestViewController.m */; };
 		830C2D41254946A9001F2EB0 /* NRTestOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830C2D40254946A9001F2EB0 /* NRTestOne.storyboard */; };
 		830C2D4425494753001F2EB0 /* NRSceneOneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 830C2D4325494753001F2EB0 /* NRSceneOneDelegate.m */; };
+		83E01E402554F7C8005952ED /* NRShortCutScceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E3F2554F7C8005952ED /* NRShortCutScceneDelegate.m */; };
+		83E01E442554FC44005952ED /* NRShorCutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E01E422554FC44005952ED /* NRShorCutViewController.m */; };
+		83E01E452554FC44005952ED /* NRShorCutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E01E432554FC44005952ED /* NRShorCutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,11 @@
 		830C2D40254946A9001F2EB0 /* NRTestOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NRTestOne.storyboard; sourceTree = "<group>"; };
 		830C2D4225494753001F2EB0 /* NRSceneOneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRSceneOneDelegate.h; sourceTree = "<group>"; };
 		830C2D4325494753001F2EB0 /* NRSceneOneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRSceneOneDelegate.m; sourceTree = "<group>"; };
+		83E01E3E2554F7C8005952ED /* NRShortCutScceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRShortCutScceneDelegate.h; sourceTree = "<group>"; };
+		83E01E3F2554F7C8005952ED /* NRShortCutScceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRShortCutScceneDelegate.m; sourceTree = "<group>"; };
+		83E01E412554FC44005952ED /* NRShorCutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRShorCutViewController.h; sourceTree = "<group>"; };
+		83E01E422554FC44005952ED /* NRShorCutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRShorCutViewController.m; sourceTree = "<group>"; };
+		83E01E432554FC44005952ED /* NRShorCutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRShorCutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,9 @@
 				830C2D092542E101001F2EB0 /* ViewController.m */,
 				830C2D3B254940FD001F2EB0 /* NRSceneTestViewController.h */,
 				830C2D3C254940FD001F2EB0 /* NRSceneTestViewController.m */,
+				83E01E412554FC44005952ED /* NRShorCutViewController.h */,
+				83E01E422554FC44005952ED /* NRShorCutViewController.m */,
+				83E01E432554FC44005952ED /* NRShorCutViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -108,6 +119,8 @@
 				830C2D062542E101001F2EB0 /* SceneDelegate.m */,
 				830C2D4225494753001F2EB0 /* NRSceneOneDelegate.h */,
 				830C2D4325494753001F2EB0 /* NRSceneOneDelegate.m */,
+				83E01E3E2554F7C8005952ED /* NRShortCutScceneDelegate.h */,
+				83E01E3F2554F7C8005952ED /* NRShortCutScceneDelegate.m */,
 			);
 			path = SceneDelegates;
 			sourceTree = "<group>";
@@ -180,6 +193,7 @@
 			files = (
 				830C2D152542E106001F2EB0 /* LaunchScreen.storyboard in Resources */,
 				830C2D41254946A9001F2EB0 /* NRTestOne.storyboard in Resources */,
+				83E01E452554FC44005952ED /* NRShorCutViewController.xib in Resources */,
 				830C2D122542E106001F2EB0 /* Assets.xcassets in Resources */,
 				830C2D0D2542E101001F2EB0 /* Main.storyboard in Resources */,
 			);
@@ -195,8 +209,10 @@
 				830C2D202542E38A001F2EB0 /* NRApplication.m in Sources */,
 				830C2D3D254940FD001F2EB0 /* NRSceneTestViewController.m in Sources */,
 				830C2D4425494753001F2EB0 /* NRSceneOneDelegate.m in Sources */,
+				83E01E442554FC44005952ED /* NRShorCutViewController.m in Sources */,
 				830C2D182542E106001F2EB0 /* main.m in Sources */,
 				830C2D102542E101001F2EB0 /* WLAppLifeCycleDemo.xcdatamodeld in Sources */,
+				83E01E402554F7C8005952ED /* NRShortCutScceneDelegate.m in Sources */,
 				830C2D0A2542E101001F2EB0 /* ViewController.m in Sources */,
 				830C2D042542E101001F2EB0 /* AppDelegate.m in Sources */,
 				830C2D072542E101001F2EB0 /* SceneDelegate.m in Sources */,
