@@ -10,7 +10,7 @@
 #import "NRFilteringViewController+DataSource.h"
 #import "NRFilteringViewController+Updating.h"
 
-@interface NRFilteringViewController () <UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
+@interface NRFilteringViewController () <UISearchBarDelegate, UISearchControllerDelegate>
 
 @property (nonatomic, strong) NRSearchResultViewController* resultsViewController;
 

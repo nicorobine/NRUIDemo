@@ -25,7 +25,7 @@
     
     NSInteger birthdayCount = [self quantityForType:NRProductType_Birthdays];
     
-    switch (indexPath.row) {
+    switch (indexPath.section) {
         case NRProductType_Birthdays - 1:
             product = self.products[indexPath.row];
             break;

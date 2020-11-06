@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NRFilteringViewController : UITableViewController
+@interface NRFilteringViewController : UITableViewController <UISearchResultsUpdating>
 
 @property (nonatomic, strong) NSMutableArray<NRProduct *>* products;
 
