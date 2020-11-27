@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tMo-gF-99G">
+            <objects>
+                <navigationController id="BIu-Fz-Q01" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ksi-ZB-60W">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T8c-Ny-Csk" kind="relationship" relationship="rootViewController" id="LwU-Bd-uXx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L73-u8-EAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-983" y="22"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VmY-nF-fe3">
+            <objects>
+                <viewController id="T8c-Ny-Csk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PqR-o8-OxM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cj4-GD-aof">
+                                <rect key="frame" x="180.5" y="395" width="53" height="106"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSj-YS-rwN">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="30"/>
+                                        <state key="normal" title="Present"/>
+                                        <connections>
+                                            <action selector="nr_present:" destination="e3D-Bd-hIA" eventType="touchUpInside" id="opQ-oj-IJD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIX-ti-Ne4">
+                                        <rect key="frame" x="0.0" y="38" width="53" height="30"/>
+                                        <state key="normal" title="Push"/>
+                                        <connections>
+                                            <action selector="nr_push:" destination="e3D-Bd-hIA" eventType="touchUpInside" id="YIr-Bx-7pc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXz-Hg-2tl">
+                                        <rect key="frame" x="0.0" y="76" width="53" height="30"/>
+                                        <state key="normal" title="Pop"/>
+                                        <connections>
+                                            <action selector="nr_pop:" destination="e3D-Bd-hIA" eventType="touchUpInside" id="ZTJ-Nb-Jwb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cj4-GD-aof" firstAttribute="centerY" secondItem="PqR-o8-OxM" secondAttribute="centerY" id="hQq-bH-gfz"/>
+                            <constraint firstItem="Cj4-GD-aof" firstAttribute="centerX" secondItem="PqR-o8-OxM" secondAttribute="centerX" id="odk-P2-gW5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pXS-XK-kpD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2PZ-AV-Dhj">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="zUb-4O-wru">
+                            <connections>
+                                <action selector="toSetting:" destination="e3D-Bd-hIA" id="2mm-KI-mIc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oou-2A-bjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="e3D-Bd-hIA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-128" y="21"/>
+        </scene>
+    </scenes>
+</document>
