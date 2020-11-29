@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     
     @IBAction func toSetting(_ sender: Any) {
         
-        present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
     }
     
     @IBAction func nr_present(_ sender: Any) {
