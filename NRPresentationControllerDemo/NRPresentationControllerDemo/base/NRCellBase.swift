@@ -6,7 +6,7 @@
 //  Copyright © 2020 Nicorobine. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class NRCellBase<Item>: NRCellProtocol, NRCellInteractionProtocol {
     
@@ -18,6 +18,10 @@ class NRCellBase<Item>: NRCellProtocol, NRCellInteractionProtocol {
     var index: Int = 0
     
     var section: Int = 0
+    
+    var accessoryType: UITableViewCell.AccessoryType = .none
+    
+    var selectionStyle: UITableViewCell.SelectionStyle = .none
     
     func onTapCell(section: Int, index: Int, item: Item) {
         
@@ -41,4 +45,5 @@ class NRSectionBase<T : NRCellProtocol>: NRSectionProtocol {
     /// 子项目
     var items: Array<Cell> = []
     
+    init() {}
 }

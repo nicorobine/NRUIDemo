@@ -24,6 +24,8 @@
 		83C517792570FD79000CD46C /* NRPresentationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C517772570FD79000CD46C /* NRPresentationSettingViewController.swift */; };
 		83C5177A2570FD79000CD46C /* NRPresentationSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C517782570FD79000CD46C /* NRPresentationSettingViewController.xib */; };
 		83C5177E2570FE4C000CD46C /* NRPresentationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C5177D2570FE4C000CD46C /* NRPresentationSetting.swift */; };
+		83C517812574BF06000CD46C /* NRBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C517802574BF06000CD46C /* NRBaseTableViewCell.swift */; };
+		83C517832574C0A6000CD46C /* NRPresentationStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C517822574C0A6000CD46C /* NRPresentationStyleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		83C517772570FD79000CD46C /* NRPresentationSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRPresentationSettingViewController.swift; sourceTree = "<group>"; };
 		83C517782570FD79000CD46C /* NRPresentationSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRPresentationSettingViewController.xib; sourceTree = "<group>"; };
 		83C5177D2570FE4C000CD46C /* NRPresentationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRPresentationSetting.swift; sourceTree = "<group>"; };
+		83C517802574BF06000CD46C /* NRBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRBaseTableViewCell.swift; sourceTree = "<group>"; };
+		83C517822574C0A6000CD46C /* NRPresentationStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRPresentationStyleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 		83C5177B2570FD7F000CD46C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				83C517802574BF06000CD46C /* NRBaseTableViewCell.swift */,
+				83C517822574C0A6000CD46C /* NRPresentationStyleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,10 +292,12 @@
 				83C517522570E845000CD46C /* ViewController.swift in Sources */,
 				83C5174E2570E845000CD46C /* AppDelegate.swift in Sources */,
 				83C517582570E845000CD46C /* NRPresentationControllerDemo.xcdatamodeld in Sources */,
+				83C517832574C0A6000CD46C /* NRPresentationStyleTableViewCell.swift in Sources */,
 				83C517502570E845000CD46C /* SceneDelegate.swift in Sources */,
 				83C517752570F9FB000CD46C /* NRAdaptivePresentationControllerDelegate.swift in Sources */,
 				52C24E75257237CA00EB9D8E /* NRCollectionModelProtocol.swift in Sources */,
 				52C24E7C257241EC00EB9D8E /* NRCellBase.swift in Sources */,
+				83C517812574BF06000CD46C /* NRBaseTableViewCell.swift in Sources */,
 				83C517732570F5D0000CD46C /* NRPresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,13 @@ protocol NRCellProtocol {
     /// 所属的section
     var section: Int { set get }
     
+    /// 要展示的item
     var item: CellItem { set get }
+    
+    /// 附件类型
+    var accessoryType: UITableViewCell.AccessoryType { set get }
+    
+    var selectionStyle: UITableViewCell.SelectionStyle { set get}
     
 }
 
@@ -39,16 +45,13 @@ protocol NRCellSelectedProtocol {
     func willSelect(in section: Int, at index: Int, of item: CellItem) -> Bool
     
     /// 已经选中
-    func DidSelect(in section: Int, at index: Int, of item: CellItem) -> Bool
+    func DidSelect(in section: Int, at index: Int, of item: CellItem)
     
     /// 将要取消选中
     func willDeselect(in section: Int, at index: Int, of item: CellItem) -> Bool
     
     /// 已经取消选中
-    func didDeselect(in section: Int, at index: Int, of item: CellItem) -> Bool
-    
-    /// cell高亮状态改变
-    func onHighlightStateChange(section: Int, index: Int, item: CellItem, highlight: Bool) -> Void
+    func didDeselect(in section: Int, at index: Int, of item: CellItem)
 }
 
 protocol NRCellHighlightProtocol {
@@ -61,11 +64,11 @@ protocol NRCellHighlightProtocol {
     func willHighlight(in section: Int, at index: Int, of item: CellItem) -> Bool
     
     /// 已经高亮
-    func didHighlight(in section: Int, at index: Int, of item: CellItem) -> Bool
+    func didHighlight(in section: Int, at index: Int, of item: CellItem)
     
     /// 将要取消高亮
     func willUnhightlight(in section: Int, at index: Int, of item: CellItem) -> Bool
     
     /// 已经取消高亮
-    func didUnhightlight(in section: Int, at index: Int, of item: CellItem) -> Bool
+    func didUnhightlight(in section: Int, at index: Int, of item: CellItem)
 }

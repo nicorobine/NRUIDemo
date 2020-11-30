@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BIu-Fz-Q01">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -26,7 +26,7 @@
         <!--View Controller-->
         <scene sceneID="VmY-nF-fe3">
             <objects>
-                <viewController id="T8c-Ny-Csk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T8c-Ny-Csk" customClass="ViewController" customModule="NRPresentationControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PqR-o8-OxM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,21 +38,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="53" height="30"/>
                                         <state key="normal" title="Present"/>
                                         <connections>
-                                            <action selector="nr_present:" destination="e3D-Bd-hIA" eventType="touchUpInside" id="opQ-oj-IJD"/>
+                                            <action selector="nr_present:" destination="T8c-Ny-Csk" eventType="touchUpInside" id="QqF-8Z-aoo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIX-ti-Ne4">
                                         <rect key="frame" x="0.0" y="38" width="53" height="30"/>
                                         <state key="normal" title="Push"/>
                                         <connections>
-                                            <action selector="nr_push:" destination="e3D-Bd-hIA" eventType="touchUpInside" id="YIr-Bx-7pc"/>
+                                            <action selector="nr_push:" destination="T8c-Ny-Csk" eventType="touchUpInside" id="mmW-Lq-Ohf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXz-Hg-2tl">
                                         <rect key="frame" x="0.0" y="76" width="53" height="30"/>
                                         <state key="normal" title="Pop"/>
                                         <connections>
-                                            <action selector="nr_pop:" destination="e3D-Bd-hIA" eventType="touchUpInside" id="ZTJ-Nb-Jwb"/>
+                                            <action selector="nr_pop:" destination="T8c-Ny-Csk" eventType="touchUpInside" id="5Uv-Vy-yV6"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -66,17 +66,24 @@
                         <viewLayoutGuide key="safeArea" id="pXS-XK-kpD"/>
                     </view>
                     <navigationItem key="navigationItem" id="2PZ-AV-Dhj">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="nI0-XU-Skn">
+                            <connections>
+                                <action selector="nr_cancel:" destination="T8c-Ny-Csk" id="YUE-ip-vwF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="zUb-4O-wru">
                             <connections>
-                                <action selector="toSetting:" destination="e3D-Bd-hIA" id="2mm-KI-mIc"/>
+                                <action selector="toSetting:" destination="T8c-Ny-Csk" id="wjd-Vz-kQH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="popButton" destination="zXz-Hg-2tl" id="wwT-UV-HPg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oou-2A-bjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="e3D-Bd-hIA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-128" y="21"/>
+            <point key="canvasLocation" x="-110" y="21"/>
         </scene>
     </scenes>
 </document>

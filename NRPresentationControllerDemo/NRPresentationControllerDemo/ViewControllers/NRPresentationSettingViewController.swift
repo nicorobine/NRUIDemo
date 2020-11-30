@@ -10,11 +10,12 @@ import UIKit
 
 class NRPresentationSettingViewController: UITableViewController {
         
-    fileprivate let setting: NRPresentationSetting
+    let setting: NRPresentationSetting
     
-    init(_ setting: NRPresentationSetting, style: UITableView.Style) {
+    init(_ setting: NRPresentationSetting = NRPresentationSetting()) {
         self.setting = setting
         super.init(style: .grouped)
+        title = .title
     }
     
     required init?(coder: NSCoder) {
@@ -23,73 +24,73 @@ class NRPresentationSettingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nr_initialUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    // MARK: - UI
+    func nr_initialUI() -> Void {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: .settingCellIdentifier);
+        tableView.bounces = true
+        tableView.isScrollEnabled = true
+        tableView.allowsMultipleSelection = false
+    }
+}
 
-    // MARK: - Table view data source
-
+// tableView
+extension NRPresentationSettingViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return setting.children.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return setting.children[section].items.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: .settingCellIdentifier, for: indexPath)
+        let settingItem = setting.children[indexPath.section].items[indexPath.row]
+        cell.textLabel?.text = settingItem.item.title
+        cell.textLabel?.lineBreakMode = NSLineBreakMode.byTruncatingHead
+        cell.accessoryType = settingItem.accessoryType
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 13)
+        cell.selectionStyle = settingItem.selectionStyle
+        if settingItem.selected {
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        } else {
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return setting.children[section].title
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let settingItem = setting.children[indexPath.section].items[indexPath.row];
+        settingItem.DidSelect(in: indexPath.section, at: indexPath.row, of: settingItem.item)
+        tableView.cellForRow(at: indexPath)?.accessoryType = settingItem.accessoryType
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let settingItem = setting.children[indexPath.section].items[indexPath.row];
+        settingItem.didDeselect(in: indexPath.section, at: indexPath.row, of: settingItem.item)
+        tableView.cellForRow(at: indexPath)?.accessoryType = settingItem.accessoryType
+    }
 }
+
+
+fileprivate extension String {
+    static let settingCellIdentifier: String = "cellId"
+    
+    static let title: String = NSLocalizedString("设置", comment: "设置展示的样式")
+}
+
+
