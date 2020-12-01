@@ -9,23 +9,32 @@
 import UIKit
 
 class NRPresentationController: UIPresentationController {
+    
+    fileprivate let _delegate = NRAdaptivePresentationControllerDelegate()
+    
+    
     override var frameOfPresentedViewInContainerView: CGRect {
         get {
+            print("\(#function) in class \(type(of: self))")
             return super.frameOfPresentedViewInContainerView;
         }
     }
     
     override var adaptivePresentationStyle: UIModalPresentationStyle {
         get {
+            print("\(#function) in class \(type(of: self))")
+            
             return super.adaptivePresentationStyle;
         }
     }
     
     override var shouldPresentInFullscreen: Bool {
+        print("\(#function) in class \(type(of: self))")
         return super.shouldPresentInFullscreen
     }
     
     override var shouldRemovePresentersView: Bool {
+        print("\(#function) in class \(type(of: self))")
         return super.shouldPresentInFullscreen
     }
     
@@ -45,14 +54,23 @@ class NRPresentationController: UIPresentationController {
     }
     
     override func presentationTransitionDidEnd(_ completed: Bool) {
+        print("\(#function) in class \(type(of: self))")
         super.presentationTransitionDidEnd(completed)
     }
     
     override func dismissalTransitionWillBegin() {
+        print("\(#function) in class \(type(of: self))")
         super.dismissalTransitionWillBegin();
     }
     
     override func dismissalTransitionDidEnd(_ completed: Bool) {
+        print("\(#function) in class \(type(of: self))")
         super.dismissalTransitionDidEnd(completed)
+    }
+    
+    override var delegate: UIAdaptivePresentationControllerDelegate? {
+        get {
+            return _delegate
+        } set {}
     }
 }

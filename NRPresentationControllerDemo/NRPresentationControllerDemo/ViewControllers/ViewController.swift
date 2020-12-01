@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        transitioningDelegate = self
+        transitioningDelegate = self
         popoverPresentationController?.delegate = self
     }
     
@@ -35,17 +35,24 @@ class ViewController: UIViewController {
     
     @IBAction func nr_present(_ sender: Any) {
         let controller = storyboard!.instantiateViewController(identifier: "ViewController")
-        let modalPresentationStyle = setting.setting.modalPresentionStyle
-//        controller.modalPresentationStyle = modalPresentationStyle
-        let navi = UINavigationController(rootViewController: controller)
-        navi.modalPresentationStyle = modalPresentationStyle
+//        let controller = NRTipsViewController(with: "测试测试")
         
-        // 设置popover
-        navi.preferredContentSize = CGSize(width: 200.0, height: 200.0)
-        navi.popoverPresentationController?.sourceView = popButton
-        navi.popoverPresentationController?.sourceRect = popButton.bounds
-        navi.popoverPresentationController?.permittedArrowDirections = .up
-        navi.modalPresentationStyle = UIModalPresentationStyle.popover
+        let modalPresentationStyle = setting.setting.modalPresentionStyle
+        controller.modalPresentationStyle = modalPresentationStyle
+        controller.transitioningDelegate = self
+//        let navi = UINavigationController(rootViewController: controller)
+//        navi.modalPresentationStyle = modalPresentationStyle
+//
+//        // 设置popover
+//        navi.preferredContentSize = CGSize(width: 200.0, height: 200.0)
+//        navi.popoverPresentationController?.sourceView = popButton
+//        navi.popoverPresentationController?.sourceRect = popButton.bounds
+//        navi.popoverPresentationController?.permittedArrowDirections = .up
+        
+        controller.preferredContentSize = CGSize(width: 200.0, height: 200.0)
+        controller.popoverPresentationController?.sourceView = popButton
+        controller.popoverPresentationController?.sourceRect = popButton.bounds
+        controller.popoverPresentationController?.permittedArrowDirections = .any
         
 //        controller.preferredContentSize = CGSize(width: 200.0, height: 200.0)
 //        controller.popoverPresentationController?.sourceView = popButton
@@ -54,7 +61,7 @@ class ViewController: UIViewController {
         
         
         print("\(#function) modalPresentationStyle: \(modalPresentationStyle.rawValue)")
-        navigationController?.present(navi, animated: true, completion: {
+        navigationController?.present(controller, animated: true, completion: {
             print("\(#function) finished")
         })
     }
@@ -69,7 +76,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return NRPresentationController(presentedViewController: presented, presenting: presenting)
+        let navi = UINavigationController(rootViewController: presented);
+        let presentationController = NRPresentationController(presentedViewController: navi, presenting: presenting)
+        return presentationController;
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -90,6 +99,7 @@ extension ViewController: UIViewControllerTransitioningDelegate {
 }
 
 extension ViewController : UIPopoverPresentationControllerDelegate {
+    
     func popoverPresentationController(_ popoverPresentationController: UIPopoverPresentationController, willRepositionPopoverTo rect: UnsafeMutablePointer<CGRect>, in view: AutoreleasingUnsafeMutablePointer<UIView>) {
         print("\(#function)")
     }
