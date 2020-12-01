@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		52C24E75257237CA00EB9D8E /* NRCollectionModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C24E74257237CA00EB9D8E /* NRCollectionModelProtocol.swift */; };
 		52C24E7C257241EC00EB9D8E /* NRCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C24E7B257241EC00EB9D8E /* NRCellBase.swift */; };
+		52C25093257630E300EB9D8E /* NRPresentationBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C25091257630E300EB9D8E /* NRPresentationBaseTableViewCell.swift */; };
+		52C25094257630E300EB9D8E /* NRPresentationBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C25092257630E300EB9D8E /* NRPresentationBaseTableViewCell.xib */; };
 		52DE49A625721C5000A524DB /* NRSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DE49A525721C5000A524DB /* NRSectionProtocol.swift */; };
 		52DE49AC25721D0F00A524DB /* NRCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DE49AB25721D0F00A524DB /* NRCellProtocol.swift */; };
 		83C5174E2570E845000CD46C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C5174D2570E845000CD46C /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		52C24E74257237CA00EB9D8E /* NRCollectionModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRCollectionModelProtocol.swift; sourceTree = "<group>"; };
 		52C24E7B257241EC00EB9D8E /* NRCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRCellBase.swift; sourceTree = "<group>"; };
+		52C25091257630E300EB9D8E /* NRPresentationBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRPresentationBaseTableViewCell.swift; sourceTree = "<group>"; };
+		52C25092257630E300EB9D8E /* NRPresentationBaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRPresentationBaseTableViewCell.xib; sourceTree = "<group>"; };
 		52DE49A525721C5000A524DB /* NRSectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRSectionProtocol.swift; sourceTree = "<group>"; };
 		52DE49AB25721D0F00A524DB /* NRCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRCellProtocol.swift; sourceTree = "<group>"; };
 		83C5174A2570E845000CD46C /* NRPresentationControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRPresentationControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +170,8 @@
 			children = (
 				83C517802574BF06000CD46C /* NRBaseTableViewCell.swift */,
 				83C517822574C0A6000CD46C /* NRPresentationStyleTableViewCell.swift */,
+				52C25091257630E300EB9D8E /* NRPresentationBaseTableViewCell.swift */,
+				52C25092257630E300EB9D8E /* NRPresentationBaseTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C5175D2570E849000CD46C /* LaunchScreen.storyboard in Resources */,
+				52C25094257630E300EB9D8E /* NRPresentationBaseTableViewCell.xib in Resources */,
 				83C5177A2570FD79000CD46C /* NRPresentationSettingViewController.xib in Resources */,
 				83C5175A2570E849000CD46C /* Assets.xcassets in Resources */,
 				83C517552570E845000CD46C /* Main.storyboard in Resources */,
@@ -298,6 +305,7 @@
 				83C517832574C0A6000CD46C /* NRPresentationStyleTableViewCell.swift in Sources */,
 				83C517502570E845000CD46C /* SceneDelegate.swift in Sources */,
 				83C517752570F9FB000CD46C /* NRAdaptivePresentationControllerDelegate.swift in Sources */,
+				52C25093257630E300EB9D8E /* NRPresentationBaseTableViewCell.swift in Sources */,
 				83C517852575E89D000CD46C /* NRTipsViewController.swift in Sources */,
 				52C24E75257237CA00EB9D8E /* NRCollectionModelProtocol.swift in Sources */,
 				52C24E7C257241EC00EB9D8E /* NRCellBase.swift in Sources */,

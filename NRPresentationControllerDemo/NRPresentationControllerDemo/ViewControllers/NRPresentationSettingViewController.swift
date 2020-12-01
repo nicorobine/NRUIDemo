@@ -37,7 +37,7 @@ class NRPresentationSettingViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: .settingCellIdentifier);
         tableView.bounces = true
         tableView.isScrollEnabled = true
-        tableView.allowsMultipleSelection = false
+        tableView.allowsMultipleSelection = true
     }
 }
 
@@ -74,15 +74,35 @@ extension NRPresentationSettingViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         let settingItem = setting.children[indexPath.section].items[indexPath.row];
-        settingItem.DidSelect(in: indexPath.section, at: indexPath.row, of: settingItem.item)
-        tableView.cellForRow(at: indexPath)?.accessoryType = settingItem.accessoryType
+        
+        switch indexPath.section {
+        case 0:
+            if settingItem.selected {
+                return
+            }
+            settingItem.DidSelect(in: indexPath.section, at: indexPath.row, of: settingItem.item)
+            for item in setting.children[indexPath.section].items {
+                if item !== settingItem {
+                    item.didDeselect(in: indexPath.section, at: indexPath.row, of: item.item)
+                }
+            }
+            tableView.reloadData()
+        case 1:
+            
+            settingItem.DidSelect(in: indexPath.section, at: indexPath.row, of: settingItem.item)
+            tableView.reloadData()
+        default: break
+            
+        }
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let settingItem = setting.children[indexPath.section].items[indexPath.row];
         settingItem.didDeselect(in: indexPath.section, at: indexPath.row, of: settingItem.item)
-        tableView.cellForRow(at: indexPath)?.accessoryType = settingItem.accessoryType
+//        tableView.cellForRow(at: indexPath)?.accessoryType = settingItem.accessoryType
+        tableView.reloadData()
     }
 }
 

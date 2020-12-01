@@ -24,7 +24,7 @@ class NRPresentationController: UIPresentationController {
         get {
             print("\(#function) in class \(type(of: self))")
             
-            return super.adaptivePresentationStyle;
+            return NRPresentationSetting.shared.modalPresentionStyle;
         }
     }
     
