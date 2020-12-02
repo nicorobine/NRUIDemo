@@ -84,7 +84,7 @@ extension NRPresentationSettingViewController {
             }
             settingItem.DidSelect(in: indexPath.section, at: indexPath.row, of: settingItem.item)
             for item in setting.children[indexPath.section].items {
-                if item !== settingItem {
+                if item !== settingItem && item.selected {
                     item.didDeselect(in: indexPath.section, at: indexPath.row, of: item.item)
                 }
             }
@@ -101,7 +101,6 @@ extension NRPresentationSettingViewController {
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let settingItem = setting.children[indexPath.section].items[indexPath.row];
         settingItem.didDeselect(in: indexPath.section, at: indexPath.row, of: settingItem.item)
-//        tableView.cellForRow(at: indexPath)?.accessoryType = settingItem.accessoryType
         tableView.reloadData()
     }
 }

@@ -156,11 +156,11 @@
 		83C517762570FD31000CD46C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				83C5178625776D54000CD46C /* presentation */,
 				83C517512570E845000CD46C /* ViewController.swift */,
 				83C517772570FD79000CD46C /* NRPresentationSettingViewController.swift */,
 				83C517782570FD79000CD46C /* NRPresentationSettingViewController.xib */,
 				83C517842575E89D000CD46C /* NRTipsViewController.swift */,
-				83C517722570F5D0000CD46C /* NRPresentationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,9 +187,17 @@
 		83C5177F2570FE5B000CD46C /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				83C517742570F9FB000CD46C /* NRAdaptivePresentationControllerDelegate.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		83C5178625776D54000CD46C /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				83C517742570F9FB000CD46C /* NRAdaptivePresentationControllerDelegate.swift */,
+				83C517722570F5D0000CD46C /* NRPresentationController.swift */,
+			);
+			path = presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

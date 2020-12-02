@@ -29,13 +29,13 @@ class NRPresentationController: UIPresentationController {
     }
     
     override var shouldPresentInFullscreen: Bool {
-        print("\(#function) in class \(type(of: self))")
-        return super.shouldPresentInFullscreen
+        print("\(#function) in class \(type(of: self)) fullScreen:\(NRPresentationSetting.shared.fullScreen)")
+        return NRPresentationSetting.shared.fullScreen
     }
     
     override var shouldRemovePresentersView: Bool {
-        print("\(#function) in class \(type(of: self))")
-        return super.shouldPresentInFullscreen
+        print("\(#function) in class \(type(of: self)) removePresentersView:\(NRPresentationSetting.shared.removePresentersView)")
+        return NRPresentationSetting.shared.removePresentersView
     }
     
     override func containerViewWillLayoutSubviews() {
