@@ -16,12 +16,12 @@ class NRAdaptivePresentationControllerDelegate: NSObject, UIAdaptivePresentation
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         print("\(#function) in class \(type(of: self))")
-        return .automatic;
+        return .none;
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         print("\(#function) in class \(type(of: self))")
-        return .automatic;
+        return .none;
     }
     
     func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {

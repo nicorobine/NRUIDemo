@@ -12,7 +12,7 @@ class NRPresentationSettingViewController: UITableViewController {
         
     let setting: NRPresentationSetting
     
-    init(_ setting: NRPresentationSetting = NRPresentationSetting()) {
+    init(_ setting: NRPresentationSetting = NRPresentationSetting.shared) {
         self.setting = setting
         super.init(style: .grouped)
         title = .title

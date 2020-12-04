@@ -9,8 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var popButton: UIButton!
+    
+    var adaptiveDelegate: NRAdaptivePresentationControllerDelegate?
     
     let setting: NRPresentationSettingViewController = NRPresentationSettingViewController()
     
@@ -35,7 +37,7 @@ class ViewController: UIViewController {
     
     @IBAction func nr_present(_ sender: Any) {
         let controller = storyboard!.instantiateViewController(identifier: "ViewController")
-//        let controller = NRTipsViewController(with: "测试测试")
+        //        let controller = NRTipsViewController(with: "测试测试")
         
         let modalPresentationStyle = setting.setting.modalPresentionStyle
         controller.modalPresentationStyle = modalPresentationStyle
@@ -43,17 +45,15 @@ class ViewController: UIViewController {
         let navi = UINavigationController(rootViewController: controller)
         navi.modalPresentationStyle = modalPresentationStyle
         navi.transitioningDelegate = self
-
+        
         // 设置popover
-        navi.preferredContentSize = CGSize(width: 200.0, height: 400.0)
+        navi.preferredContentSize = CGSize(width: 200.0, height: 200.0)
         navi.popoverPresentationController?.sourceView = popButton
         navi.popoverPresentationController?.sourceRect = popButton.bounds
         navi.popoverPresentationController?.permittedArrowDirections = .up
         
-//        controller.preferredContentSize = CGSize(width: 200.0, height: 200.0)
-//        controller.popoverPresentationController?.sourceView = popButton
-//        controller.popoverPresentationController?.sourceRect = popButton.bounds
-//        controller.popoverPresentationController?.permittedArrowDirections = .any
+        adaptiveDelegate = NRAdaptivePresentationControllerDelegate()
+        navi.presentationController?.delegate = adaptiveDelegate
         
         print("\(#function) modalPresentationStyle: \(modalPresentationStyle.rawValue)")
         navigationController?.present(navi, animated: true, completion: {
@@ -66,7 +66,39 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nr_pop(_ sender: Any) {
+        if self.presentingViewController != nil {
+            self.dismiss(animated: true) {
+                print("\(#function) finished")
+            }
+        }
     }
+    
+    @IBAction func nr_popover(_ sender: Any) {
+        
+        // 导航上的其它barButtonItem仍然可以点击，popoverPresentationController
+        // 会自动把其它的barButtonItem添加到
+        
+        let controller = storyboard!.instantiateViewController(identifier: "ViewController")
+        controller.transitioningDelegate = self
+        let navi = UINavigationController(rootViewController: controller)
+        navi.modalPresentationStyle = .popover
+        navi.transitioningDelegate = self
+        
+        // 设置popover
+        navi.preferredContentSize = CGSize(width: 200.0, height: 200.0)
+        navi.popoverPresentationController?.permittedArrowDirections = .up
+        navi.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItems?[1]
+        navi.popoverPresentationController?.passthroughViews = [popButton];
+        
+        adaptiveDelegate = NRAdaptivePresentationControllerDelegate()
+        navi.presentationController?.delegate = adaptiveDelegate
+        
+        print("\(#function) modalPresentationStyle: \(modalPresentationStyle.rawValue)")
+        navigationController?.present(navi, animated: true, completion: {
+            print("\(#function) finished")
+        })
+    }
+    
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {
@@ -107,6 +139,17 @@ extension ViewController : UIPopoverPresentationControllerDelegate {
     func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController) {
         print("\(#function)")
     }
+    
+    // ios13弃用
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+        
+    }
+    
+    // ios 13弃用
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        return true
+    }
+    
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none

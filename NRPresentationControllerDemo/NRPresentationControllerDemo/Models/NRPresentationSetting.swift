@@ -11,11 +11,21 @@ import UIKit
 class NRPresentationSetting: NSObject {
     
     static var shared: NRPresentationSetting {
+        struct Inner {
+            static let instance = NRPresentationSetting()
+        }
+        
         return Inner.instance
     }
     
-    struct Inner {
-        static let instance = NRPresentationSetting()
+    private var _children: Array<NRSettingSection>;
+    
+    override init() {
+        _children = Array()
+        super.init()
+        _children.append(NRSettingSection(title: .presentationStyleSectionTitle, section: 0, children: modalPresentationStyles()))
+        _children.append(NRSettingSection(title: .presentationBaseSectionTitle, section: 1, children: nr_baseSettings()))
+        _children.first?.items.first?.selected = true
     }
     
     var modalPresentionStyle: UIModalPresentationStyle {
@@ -40,8 +50,8 @@ class NRPresentationSetting: NSObject {
             return false
         }.first
         
-        if fullScreenSetting != nil {
-            return ((fullScreenSetting?.selected) != nil)
+        if let fullscreen = fullScreenSetting?.selected {
+            return fullscreen
         }
         
         return false
@@ -49,29 +59,18 @@ class NRPresentationSetting: NSObject {
     
     /// 是否移除底部
     var removePresentersView:Bool {
-        let fullScreenSetting: NRSettingItem? = _children[1].items.filter { (item: NRSettingItem) -> Bool in
+        let removeSetting: NRSettingItem? = _children[1].items.filter { (item: NRSettingItem) -> Bool in
             if let boolSetting: NRPresentationBoolSetting = item.item as? NRPresentationBoolSetting {
                 return boolSetting.style == NRPresentationBoolSetting.Style.removePresentersView
             }
             return false
         }.first
         
-        if fullScreenSetting != nil {
-            return ((fullScreenSetting?.selected) != nil)
+        if let remove = removeSetting?.selected {
+            return remove
         }
         
         return false
-    }
-    
-    
-    private var _children: Array<NRSettingSection>;
-    
-    override init() {
-        _children = Array()
-        super.init()
-        _children.append(NRSettingSection(title: .presentationStyleSectionTitle, section: 0, children: modalPresentationStyles()))
-        _children.append(NRSettingSection(title: .presentationBaseSectionTitle, section: 1, children: nr_baseSettings()))
-        _children.first?.items.first?.selected = true
     }
     
     /// 是否使用自定义动画

@@ -16,7 +16,8 @@ class NRPresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         get {
             print("\(#function) in class \(type(of: self))")
-            return super.frameOfPresentedViewInContainerView;
+//            return super.frameOfPresentedViewInContainerView;
+            return CGRect(origin: CGPoint(x: 100, y: 100), size: presentedViewController.preferredContentSize)
         }
     }
     

@@ -71,11 +71,23 @@
                                 <action selector="nr_cancel:" destination="T8c-Ny-Csk" id="YUE-ip-vwF"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="zUb-4O-wru">
-                            <connections>
-                                <action selector="toSetting:" destination="T8c-Ny-Csk" id="wjd-Vz-kQH"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="compose" id="zUb-4O-wru">
+                                <connections>
+                                    <action selector="toSetting:" destination="T8c-Ny-Csk" id="wjd-Vz-kQH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="lA3-gS-p0T">
+                                <connections>
+                                    <action selector="nr_popover:" destination="T8c-Ny-Csk" id="OIm-2U-Mwn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="stop" id="BR6-Vw-Mvm">
+                                <connections>
+                                    <action selector="nr_pop:" destination="T8c-Ny-Csk" id="QU0-Vg-fPV"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="popButton" destination="zXz-Hg-2tl" id="wwT-UV-HPg"/>
